@@ -1,0 +1,71 @@
+.unpadding {
+  padding: 0 !important;
+}
+
+a {
+  outline: none;
+}
+
+
+.outlinenone {
+  outline: none;
+  &:hover, &:active, &:visited, &:focus {
+    outline: none;
+  }
+}
+
+.lastli-unmargin {
+  li {
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.btn-style {
+  background-color: #10b4a4;
+  box-shadow: 0 3px 0 0 #0a6a60;
+  min-height: 48px;
+  font: 600 20px/48px AvenirNext,sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+%btn-style {
+  background-color: #10b4a4;
+  box-shadow: 0 3px 0 0 #0a6a60;
+  min-height: 48px;
+  font: 600 20px/48px AvenirNext,sans-serif;
+  text-align: center;
+  color: #fff;
+  border: none;
+}
+
+@mixin inputPlaceholder() {
+    $selector: '';
+    $prefixes: (
+        moz: "::-moz",
+        webkit: "::-webkit",
+        ie: ":-ms"
+    );
+    @each $prop, $value in $prefixes {
+        @if $prop != "moz" {
+            $selector: #{$value}-input-placeholder;
+        } @else {
+            $selector: #{$value}-placeholder;
+        }
+        @if & {
+            &#{$selector} {
+                @content;
+            }
+        } @else {
+            #{$selector} {
+                @content;
+            }
+        }
+    }
+    &::placeholder {
+      @content;
+    }
+}

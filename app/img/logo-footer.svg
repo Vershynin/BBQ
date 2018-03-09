@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2436.8 1130.4" style="enable-background:new 0 0 2436.8 1130.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:url(#SVGID_1_);stroke-width:61.94;stroke-miterlimit:10;}
+	.st1{enable-background:new    ;}
+	.st2{fill:#FFFFFF;}
+</style>
+<title>логотип (темный фон)</title>
+<g id="Слой_1_1_">
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="492.105" y1="1130.0005" x2="492.105" y2="-0.4204" gradientTransform="matrix(1 0 0 -1 0 1130)">
+		<stop  offset="0" style="stop-color:#82B147"/>
+		<stop  offset="0.13" style="stop-color:#6DA24B"/>
+		<stop  offset="0.34" style="stop-color:#529050"/>
+		<stop  offset="0.55" style="stop-color:#3F8253"/>
+		<stop  offset="0.77" style="stop-color:#347B55"/>
+		<stop  offset="1" style="stop-color:#307856"/>
+	</linearGradient>
+	<polygon class="st0" points="33,298.8 494,35.7 953.2,302.1 951.3,831.6 490.2,1094.7 31,828.3 	"/>
+	<g class="st1">
+		<path class="st2" d="M553.6,750.8c-33.2-30.4-49.9-69.9-49.9-118.6V388.8h85.5v239.7c0,26,8.4,47.4,25.1,64.1
+			c16.7,16.7,37.3,25.1,61.6,25.1s44.8-8.4,61.3-25.1c16.5-16.7,24.8-38.1,24.8-64.1V388.8h86.1v243.4c0,48.3-16.6,87.8-49.9,118.3
+			s-74,45.8-122.3,45.8S586.9,781.2,553.6,750.8z"/>
+	</g>
+</g>
+<g id="Слой_2">
+	<g class="st1">
+		<path class="st2" d="M1061,388.8h171.6c57,0,101.2,14.6,132.6,43.7c31.4,29.1,47.1,66.2,47.1,111.2c0,27.3-6.6,52.2-19.8,75
+			c-13.2,22.7-31.8,41.1-55.8,55.1l83.6,116.5h-105.9l-61.9-92.9c-13.6,0.8-33,1.2-58.2,1.2h-46.5v91.7H1061V388.8z M1236.3,624.1
+			c26,0,46.8-7.6,62.3-22.9c15.5-15.3,23.2-34.5,23.2-57.6s-7.6-42.3-22.9-57.6c-15.3-15.3-35.9-22.9-61.9-22.9h-89.2v161.1H1236.3z
+			"/>
+		<path class="st2" d="M1485.3,388.8h86.7v401.4h-86.7V388.8z"/>
+		<path class="st2" d="M1700.6,442.7c40.3-40.1,91-60.1,152.1-60.1c50.8,0,95,14.5,132.6,43.4l-50.2,58.8
+			c-21.5-15.7-46.9-23.5-76.2-23.5c-38,0-68.9,12.5-92.6,37.5c-23.7,25-35.6,55.2-35.6,90.7s11.7,65.9,35,91.1
+			c23.3,25.2,52.5,37.8,87.7,37.8c35.9,0,65.9-10.7,89.8-32.2l52.7,59.5c-38.8,34.3-86.5,51.4-143.1,51.4
+			c-61.1,0-111.8-20-152.1-60.1c-40.3-40.1-60.4-89.2-60.4-147.4C1640.2,531.6,1660.3,482.7,1700.6,442.7z"/>
+		<path class="st2" d="M2048.4,388.8h86.7v156.7h171.6V388.8h86.7v401.4h-86.7V619.8h-171.6v170.3h-86.7V388.8z"/>
+	</g>
+</g>
+</svg>

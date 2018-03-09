@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>BBQ-food-menu</title>
+	<meta name="description" content="Serwinmedia"/>
+	<meta name="keywords" content="Serwinmedia"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+	<!-- Header CSS (first screen styles from header.min.css) - inserted in the build of the project -->
+
+	<!-- inject:cssinlining -->
+	<link rel="stylesheet" href="css/header.min.css">
+	<!-- endinject -->
+
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>!function(e){"use strict";function t(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function n(n,o){if(e.localStorage&&e.XMLHttpRequest)t(n,o)?a(localStorage[n+"_content"]):function(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(a(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}(n,o);else{var r=l.createElement("link");r.href=o,r.id=n,r.rel="stylesheet",r.type="text/css",l.getElementsByTagName("head")[0].appendChild(r),l.cookie=n}}function a(e){var t=l.createElement("style");t.setAttribute("type","text/css"),l.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var l=e.document;e.loadCSS=function(e,t,n){var a,o=l.createElement("link");if(t)a=t;else{var r;a=(r=l.querySelectorAll?l.querySelectorAll("style,link[rel=stylesheet],script"):(l.body||l.getElementsByTagName("head")[0]).childNodes)[r.length-1]}var s=l.styleSheets;o.rel="stylesheet",o.href=e,o.media="only x",a.parentNode.insertBefore(o,t?a:a.nextSibling);var c=function(e){for(var t=o.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return o.onloadcssdefined=c,c(function(){o.media=n||"all"}),o},e.loadLocalStorageCSS=function(a,o){t(a,o)||l.cookie.indexOf(a)>-1?n(a,o):("load",s=function(){n(a,o)},(r=e).addEventListener?r.addEventListener("load",s,!1):r.attachEvent&&r.attachEvent("onload",s));var r,s}}(this)</script>
+	<!-- Load Fonts CSS Start -->
+	<script></script>
+	<!-- Load Fonts CSS End -->
+	<!-- Load Custom CSS Start -->
+	<!--<Deject>-->
+
+	<!--</Deject>-->
+	<script>loadCSS("css/main.min.css?ver=1.0.0",!1,"all")</script>
+	<!-- Load Custom CSS End -->
+	<!-- Load Custom CSS Compiled without JS Start -->
+	<noscript>
+		<link rel="stylesheet" href="header.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+	</noscript>
+  <link rel="stylesheet" href="css/swiper.min.css">
+
+
+	<!-- Load Custom CSS Compiled without JS End -->
+	<!-- Custom Browsers Color Start -->
+	<!-- Chrome, Firefox OS and Opera -->
+	<!-- Windows Phone -->
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<!-- Custom Browsers Color End -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#e10d1b">
+	<link rel="shortcut icon" href="favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#e10d1b">
+	<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+	<meta name="msapplication-config" content="favicons/browserconfig.xml">
+	<meta name="theme-color" content="#e10d1b">
+</head>
+
+<body id="mainpage">
+
+
+	<!--BUTTON-CART -->
+	<div class="menu_icon ic-cart-custom">
+		<i class="fa fa-bars" aria-hidden="true"></i>
+	</div>
+
+	<header role="banner" class="menu-white menupage-oneitem">
+		<nav id="navbar-primary" class="navbar" role="navigation">
+			<div class="container-fluid nopadding">
+				<div class="searchblock">
+					<form action="" class="search-form">
+						<fieldset>
+							<input type="text" placeholder="Введите название блюда или ингридиента, например Четыре сыра" name="search-field" class="search-field">
+							<input type="submit" id="search-submit" value="">
+						</fieldset>
+					</form>
+				</div>
+				<div class="callback-block">
+					<div class="container">
+						<form action="" class="callback-form">
+								<input type="text" placeholder="Ваше имя" name="callback-name" class="callback-name">
+								<input type="tel" placeholder="Ваш телефон" name="callback-phone" class="callback-phone" pattern="2[0-9]{3}-[0-9]{3}">
+								<input type="submit" id="callback-submit" value="Заказать обратный звонок">
+								<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" id="callback-close">
+										<path class="cartitem-closeico" fill="#C0C0C0" fill-rule="nonzero" d="M8.822 7.502l5.892-5.892A.936.936 0 1 0 13.39.286L7.498 6.178 1.606.286A.936.936 0 0 0 .282 1.61l5.892 5.892-5.892 5.892a.936.936 0 1 0 1.324 1.324l5.892-5.892 5.892 5.892a.934.934 0 0 0 1.324 0 .936.936 0 0 0 0-1.324L8.822 7.502z"/>
+								</svg>
+						</form>
+					</div>
+				</div>
+				<div class="uncollapse" id="navbar-primary-collapse">
+					<ul class="nav navbar-nav custom-topnav" id="menu">
+						<li class="header-phone">(066) 451-36-74</li>
+						<li><a id="callback" href="#services-section-wrap">Заказать обратный звонок</a></li>
+						<li class="logo-center"><img src="img/bbq-logo.png" class="top-logo"></li>
+						<li class="work-time"><span>Работаем с 10:00 до 20:00</span></li>
+						<li class="header-social">
+							<ul class="additionalmenu-top">
+								<li><a class="insta-top" href="#"></a></li>
+								<li><a class="facebook-top" href="#"></a></li>
+								<li id="search">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+									    <path class="search-ico" fill-rule="nonzero" d="M19.734 18.448l-5.16-5.16a8.182 8.182 0 1 0-1.286 1.285l5.16 5.16a.91.91 0 0 0 1.286-1.285zM8.182 14.545a6.364 6.364 0 1 1 0-12.727 6.364 6.364 0 0 1 0 12.727z"/>
+									</svg>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+			<!-- <h1 class="slogan-top">Меню</h1> -->
+	<div class="page-overl"></div>
+	</header>
+
+
+
+
+<section class="bbq-foodmenu">
+	<div class="container">
+
+
+		<nav class="navbar">
+	   <div class="container-fluid">
+	     <div class="navbar-header">
+	       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	         <span class="icon-bar"></span>
+	         <span class="icon-bar"></span>
+	         <span class="icon-bar"></span>
+	       </button>
+	     </div>
+	     <div class="collapse navbar-collapse" id="myNavbar">
+	       <ul class="nav navbar-nav">
+					 <ul class="foodmenu">
+			 			<li>
+			 				<a href="#">
+			 					<img src="img/01.png" alt="bbq-menu">
+			 					<span>Бургеры</span>
+			 				</a>
+			 			</li>
+			 			<li>
+			 				<a href="#">
+			 					<img src="img/02.png" alt="bbq-menu">
+			 					<span>Бизнес меню</span>
+			 				</a>
+			 			</li>
+			 			<li>
+			 				<a href="#">
+			 					<img src="img/03.png" alt="bbq-menu">
+			 					<span>Кухня</span>
+			 				</a>
+			 			</li>
+			 			<li>
+			 				<a href="#">
+			 					<img src="img/04.png" alt="bbq-menu">
+			 					<span>Первые блюда</span>
+			 				</a>
+			 			</li>
+			 			<li>
+			 				<a href="#">
+			 					<img src="img/05.png" alt="bbq-menu">
+			 					<span>Мангал</span>
+			 				</a>
+			 			</li>
+			 			<li>
+			 				<a href="#">
+			 					<img src="img/06.png" alt="bbq-menu">
+			 					<span>Десерты</span>
+			 				</a>
+			 			</li>
+			 			<li>
+			 				<a href="#">
+			 					<img src="img/07.png" alt="bbq-menu">
+			 					<span>Напитки</span>
+			 				</a>
+			 			</li>
+			 		</ul>
+	       </ul>
+	     </div>
+	   </div>
+	 </nav>
+
+	</div>
+</section>
+
+<section class="bbq-breadcrumbs">
+	<div class="container">
+		<ul class="breadcrumbs-top">
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">Меню</a></li>
+			<li><a href="#">Бургеры</a></li>
+			<li>Бургер с мясом и сыром «Чеддер»</li>
+		</ul>
+	</div>
+</section>
+
+
+<section class="bbq-singleitem">
+	<div class="container clr-white">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+				<img src="img/bbq-single.jpg" alt="bbq-oneitem" class="img-responsive singlebbq">
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<h2 class="bbqsingle-itemhead">Бургер с мясом и сыром «Чеддер»</h2>
+				<p class="bbqsingle-itemhead-weight">от 310 грамм</p>
+				<p class="bbqsingle-item-text">Лень приготовить еду самому?</p>
+				<p class="bbqsingle-item-text">Покупайте Бургер с мясом и сыром «Чеддер» из заведения "БарбеQ".
+				Это вкусное, сытное, а также полезное блюдо, приготовленное из натуральных продуктов.</p>
+
+				<div class="bbqsingle-bottom-wrapper">
+					<span class="oneprice">от 80 грн</span>
+
+					<div class="counter">
+						<button type="button" class="but counterBut dec">-</button>
+						<input type="text" class="field fieldCount" value="1" data-min="1" data-max="20">
+						<button type="button" class="but counterBut inc">+</button>
+					</div>
+					<a href="#" class="btn-singleorder">Заказать</a>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+				<div class="consist">
+					<h3>Состав</h3>
+					<ul>
+						<li>булочка</li>
+						<li>котлета</li>
+						<li>сыр «Чеддер»</li>
+						<li>огурец</li>
+						<li>листья салата</li>
+						<li>лук</li>
+						<li>соус</li>
+						<li>кетчуп</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="popular-bbq">
+	<div class="container nopadding">
+		<h2 class="bbq-header recommended-bbq">Рекомендуемые блюда</h2>
+	<div class="grid-wrap cols-four">
+		<div class="grid-item">
+			<a href="#"><img src="img/cart-01.jpg" alt="slider-img" title="розовый динозаврик" class="img-responsive"></a>
+			<span class="bbq-category">Мангал</span>
+			<h3>Сыр на мангале с лимонно-медовой заправкой</h3>
+			<span class="recommended-price">29 грн</span>
+
+			<div class="counter">
+				<button type="button" class="but counterBut dec">-</button>
+				<input type="text" class="field fieldCount" value="1" data-min="1" data-max="20">
+				<button type="button" class="but counterBut inc">+</button>
+			</div>
+			<a href="#" class="bbq-item-order">Заказать</a>
+		</div>
+		<div class="grid-item">
+			<a href="#"><img src="img/cart-02.png" alt="slider-img" title="розовый динозаврик" class="img-responsive"></a>
+			<span class="bbq-category">Бургеры</span>
+			<h3>Куриный бургер-сет</h3>
+			<span class="recommended-price">60 грн</span>
+
+			<div class="counter">
+				<button type="button" class="but counterBut dec">-</button>
+				<input type="text" class="field fieldCount" value="1" data-min="1" data-max="20">
+				<button type="button" class="but counterBut inc">+</button>
+			</div>
+			<a href="#" class="bbq-item-order">Заказать</a>
+		</div>
+		<div class="grid-item">
+			<a href="#"><img src="img/cart-03.png" alt="slider-img" title="розовый динозаврик" class="img-responsive"></a>
+			<span class="bbq-category">Мангал</span>
+			<h3>Большой денер</h3>
+			<span class="recommended-price">39 грн</span>
+
+			<div class="counter">
+				<button type="button" class="but counterBut dec">-</button>
+				<input type="text" class="field fieldCount" value="1" data-min="1" data-max="20">
+				<button type="button" class="but counterBut inc">+</button>
+			</div>
+			<a href="#" class="bbq-item-order">Заказать</a>
+		</div>
+
+		<div class="grid-item">
+			<a href="#"><img src="img/cart-03.png" alt="slider-img" title="розовый динозаврик" class="img-responsive"></a>
+			<span class="bbq-category">Мангал</span>
+			<h3>Большой денер</h3>
+			<span class="recommended-price">39 грн</span>
+
+			<div class="counter">
+				<button type="button" class="but counterBut dec">-</button>
+				<input type="text" class="field fieldCount" value="1" data-min="1" data-max="20">
+				<button type="button" class="but counterBut inc">+</button>
+			</div>
+			<a href="#" class="bbq-item-order">Заказать</a>
+		</div>
+
+		<div class="grid-item">
+			<a href="#"><img src="img/cart-03.png" alt="slider-img" title="розовый динозаврик" class="img-responsive"></a>
+			<span class="bbq-category">Мангал</span>
+			<h3>Большой денер - он великолепен</h3>
+			<span class="recommended-price">39 грн</span>
+
+			<div class="counter">
+				<button type="button" class="but counterBut dec">-</button>
+				<input type="text" class="field fieldCount" value="1" data-min="1" data-max="20">
+				<button type="button" class="but counterBut inc">+</button>
+			</div>
+			<a href="#" class="bbq-item-order">Заказать</a>
+		</div>
+
+		<div class="grid-item">
+			<a href="#"><img src="img/cart-03.png" alt="slider-img" title="розовый динозаврик" class="img-responsive"></a>
+			<span class="bbq-category">Мангал</span>
+			<h3>Большой денер</h3>
+			<span class="recommended-price">39 грн</span>
+
+			<div class="counter">
+				<button type="button" class="but counterBut dec">-</button>
+				<input type="text" class="field fieldCount" value="1" data-min="1" data-max="20">
+				<button type="button" class="but counterBut inc">+</button>
+			</div>
+			<a href="#" class="bbq-item-order">Заказать</a>
+		</div>
+
+		<div class="grid-item">
+			<a href="#"><img src="img/cart-03.png" alt="slider-img" title="розовый динозаврик" class="img-responsive"></a>
+			<span class="bbq-category">Мангал</span>
+			<h3>Большой денер</h3>
+			<span class="recommended-price">39 грн</span>
+
+			<div class="counter">
+				<button type="button" class="but counterBut dec">-</button>
+				<input type="text" class="field fieldCount" value="1" data-min="1" data-max="20">
+				<button type="button" class="but counterBut inc">+</button>
+			</div>
+			<a href="#" class="bbq-item-order">Заказать</a>
+		</div>
+
+		<div class="grid-item">
+			<a href="#"><img src="img/cart-03.png" alt="slider-img" title="розовый динозаврик" class="img-responsive"></a>
+			<span class="bbq-category">Мангал</span>
+			<h3>Большой денер на мангале с лимонно - медовой заправкой и специями и прочий очень длинный текст который очень любят заказчики</h3>
+			<span class="recommended-price">39 грн</span>
+
+			<div class="counter">
+				<button type="button" class="but counterBut dec">-</button>
+				<input type="text" class="field fieldCount" value="1" data-min="1" data-max="20">
+				<button type="button" class="but counterBut inc">+</button>
+			</div>
+			<a href="#" class="bbq-item-order">Заказать</a>
+		</div>
+	</div>
+
+	</div>
+</section>
+<section class="textsection">
+	<div class="container textcont mainsection-text">
+		<h2 class="bbq-header">Доставка еды в Запорожье</h2>
+		<p>Доставка еды в Запорожье «Rock n Roll» это: вкусно, быстро и недорого. Именно на этих трех принципах работает Доставка еды на дом «Rock n Roll».</p>
+		<p>1. Вкусно потому что: все наши суши и пицца готовятся только перед самой доставкой к вашему столу. Готовят их профессиональные повара из свежих и качественных ингредиентов, строго следуя уникальным рецептам «Rock n Roll»</p>
+		<p>2. Мы доставляем суши и пиццу — максимально быстро. А все благодаря команде профессионалов : операторов, поваров, курьеров, логистов, упаковщиков. У которых одна общая цель — оперативная доставка вкусной еды от «Rock n Roll» прямо к Вашему столу.</p>
+		<p>3. Мы делаем вкусные суши и пиццу с доставкой доступнее, каждый день, выбирая только лучшие продукты у самых надежных и крупных поставщиков с эксклюзивными ценами по всей Украине.</p>
+		<p>Мы гарантируем, что все блюда, заказанные Вами, готовятся непосредственно перед отправкой. А чтобы вкус и аромат блюд сохранился с доставкой, мы используем специальную пищевую упаковку.</p>
+
+		<h3>Заказ еды на дом</h3>
+
+		<p>Заказ еды на дом займет у Вас до 3х минут времени, выберите понравившееся вам блюдо, нажмите «заказать» и встречайте вкусные суши, лапшу в коробке или пиццу с доставкой. Вам не нужно платить за доставку еды потому что сервис доставки вкусной еды «Rock n Roll» это всегда бесплатная доставка из рук в руки, в любое время и погоду. В каком бы городе вы бы не делали заказ, будь то Днепр или Запорожье, цена доставки еды на дом или в офис будет неизменно равна нулю.</p>
+		<p>Привыкли забирать блюда из ресторана сами и бесплатная доставка еды на дом не для вас, тогда закажите на сайте и забирайте еду прямо из ресторана со скидкой 10%.</p>
+		<p>А еще оцените наши акции, ведь за каждый заказ у нас мы подарим ролл «филадельфия» или ролл «калифорния ред». (*имеется в виду заказ на сумму 399 грн).</p>
+		<p>А Еще начислим на Вашу дисконтную карту 10% от суммы заказа. Когда на вашем счету будет более 150 баллов, Обменяйте накопленные балы на любые блюда из меню «Rock n Roll» по курсу 1 балл = 1 гривне. С бесплатной доставкой.</p>
+		<p>Доставка еды на дом в Днепре и Запорожье «Rock n Roll» это качество выше цены — попробуйте и убедитесь сами!</p>
+	</div>
+</section>
+
+<!-- GMAP KEY   AIzaSyAfS_4_tPY7zFaLTVnHdY9QmyYGKU3TZxE  -->
+
+
+
+
+<div class="menu-mobile--itself">
+
+	<!--BUTTON-CLOSE -->
+	<div class="close">
+		<i class="fa fa-times-circle" ></i>
+	</div>
+
+<div class="overflowtest">
+<h2 class="cart-header cart-static">Корзина</h2>
+<h2 class="cart-header cart-count">3 позиции</h2>
+<form action="" class="cart-items">
+
+	<fieldset class="cart-singleitem">
+		<img class="item-image" src="img/cart-01.jpg" alt="cart-item-1">
+		<p class="item-name">
+			Сыр на мангале с лимонно-медовой заправкой
+			<span>29 грн</span>
+		</p>
+		<div class="counter">
+			<button type="button" class="but counterBut dec">-</button>
+			<input type="text" class="field fieldCount" value="1" data-min="1" data-max="20">
+			<button type="button" class="but counterBut inc">+</button>
+		</div>
+
+		<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" class="cartitem-close">
+				<path class="cartitem-closeico" fill="#C0C0C0" fill-rule="nonzero" d="M8.822 7.502l5.892-5.892A.936.936 0 1 0 13.39.286L7.498 6.178 1.606.286A.936.936 0 0 0 .282 1.61l5.892 5.892-5.892 5.892a.936.936 0 1 0 1.324 1.324l5.892-5.892 5.892 5.892a.934.934 0 0 0 1.324 0 .936.936 0 0 0 0-1.324L8.822 7.502z"/>
+		</svg>
+	</fieldset>
+
+	<fieldset class="cart-singleitem">
+		<img class="item-image" src="img/cart-03.png" alt="cart-item-2">
+		<p class="item-name">
+			Большой денер
+			<span>39 грн</span>
+		</p>
+		<div class="counter">
+			<button type="button" class="but counterBut dec">-</button>
+			<input type="text" class="field fieldCount" value="1" data-min="1" data-max="20">
+			<button type="button" class="but counterBut inc">+</button>
+		</div>
+
+		<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" class="cartitem-close">
+				<path class="cartitem-closeico" fill="#C0C0C0" fill-rule="nonzero" d="M8.822 7.502l5.892-5.892A.936.936 0 1 0 13.39.286L7.498 6.178 1.606.286A.936.936 0 0 0 .282 1.61l5.892 5.892-5.892 5.892a.936.936 0 1 0 1.324 1.324l5.892-5.892 5.892 5.892a.934.934 0 0 0 1.324 0 .936.936 0 0 0 0-1.324L8.822 7.502z"/>
+		</svg>
+	</fieldset>
+
+
+	<fieldset class="cart-singleitem">
+		<img class="item-image" src="img/cart-02.png" alt="cart-item-3">
+		<p class="item-name">
+			Куриный бургер-сет
+			<span>60 грн</span>
+		</p>
+		<div class="counter">
+			<button type="button" class="but counterBut dec">-</button>
+			<input type="text" class="field fieldCount" value="1" data-min="1" data-max="20">
+			<button type="button" class="but counterBut inc">+</button>
+		</div>
+
+		<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" class="cartitem-close">
+				<path class="cartitem-closeico" fill="#C0C0C0" fill-rule="nonzero" d="M8.822 7.502l5.892-5.892A.936.936 0 1 0 13.39.286L7.498 6.178 1.606.286A.936.936 0 0 0 .282 1.61l5.892 5.892-5.892 5.892a.936.936 0 1 0 1.324 1.324l5.892-5.892 5.892 5.892a.934.934 0 0 0 1.324 0 .936.936 0 0 0 0-1.324L8.822 7.502z"/>
+		</svg>
+	</fieldset>
+
+	<fieldset class="order-contact">
+		<p><label for="order-name">Имя</label><input type="text" class="order-name" name="order-name" placeholder="Введите свое имя"></p>
+		<p><label for="order-name">Телефон</label><input type="tel" class="order-phone" name="order-phone" placeholder="Введите свой телефон"></p>
+		<p>
+			<label>Способ оплаты</label>
+			<select class="order-select">
+				<option>Наличными</option>
+				<option>Безналичный расчет</option>
+			</select>
+	</p>
+	<p>
+		<label>Способ доставки</label>
+		<select class="order-select">
+			<option>Самовывоз</option>
+			<option>Доставка курьером</option>
+		</select>
+</p>
+	</fieldset>
+	<fieldset class="deliverytime">
+		time delivery block
+	</fieldset>
+
+	<p class="freedelivery-block">Закажи еще на 123 грн и получи бесплатную доставку!</p>
+	<input type="submit" id="order-submit" value="Оформить заказ" class="cart-ordersubmit">
+</form>
+
+</div>
+</div>
+
+	<!-- <div class="wrapper"> -->
+
+
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+				<ul class="footer-list">
+					<li>
+						<a href="#">Меню</a>
+					</li>
+					<li>
+						<a href="#">Ресторан</a>
+					</li>
+					<li>
+						<a href="#">Бизнес меню</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+				<ul class="footer-list">
+					<li><a href="#">(066) 451-36-74</a></li>
+					<li><a href="#">(066) 451-36-74</a></li>
+					<li><a href="#">(066) 451-36-74</a></li>
+				</ul>
+
+
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+				<ul class="footer-social">
+					<li><a href="#"><img src="img/instagram.svg" alt="footer-instagram" title="instagram"></a></li>
+					<li><a href="#"><img src="img/facebook.svg" alt="footer-facebook" title="facebook"></a></li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+				<a href="#" class="urich-logo">
+					<img src="img/logo-footer.svg" alt="urich-logo" title="urich-logo">
+					<span>Designed by URich</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Swiper JS -->
+
+
+	<!-- Initialize Swiper -->
+
+
+
+	<!-- inject:js -->
+	<!-- <script src="js/common.js" defer></script> -->
+	<!-- endinject -->
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+
+
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfS_4_tPY7zFaLTVnHdY9QmyYGKU3TZxE&callback=initMap"></script>
+</body>
+
+</html>

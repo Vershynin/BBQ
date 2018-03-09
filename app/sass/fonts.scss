@@ -1,0 +1,42 @@
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+    url('#{$file-path}.woff') format('woff'),
+    url('#{$file-path}.ttf') format('truetype'),
+    url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+
+}
+
+
+
+// @include font-face(AvenirNext, '../fonts/Avenir/AvenirNextCyr-Bold', 700, bold); 
+// @include font-face(AvenirNext, '../fonts/Avenir/AvenirNextCyrDemi', 600, normal); 
+// @include font-face(AvenirNext, '../fonts/Avenir/AvenirNextCyrMedium', 500, normal); 
+// @include font-face(AvenirNext, '../fonts/Avenir/AvenirNextCyr-Regular', 400, normal); 
+
+
+
+@include font-face(AvenirNext, '../fonts/Avenir/AvenirNextCyr-Bold', 700, normal);
+@include font-face(AvenirNext, '../fonts/Avenir/AvenirNextCyrDemi', 600, normal);
+@include font-face(AvenirNext, '../fonts/Avenir/AvenirNextCyrMedium', 500, normal);
+@include font-face(AvenirNext, '../fonts/Avenir/AvenirNextCyr-Regular', 400, normal);
+
+//@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic,cyrillic-ext');
+
+// @mixin font-face($font-family, $file-path, $font-weight, $font-style) { 
+//     @font-face { 
+//       font-family: $font-family; 
+//       src: url('#{$file-path}.eot'); 
+//       src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), 
+//       url('#{$file-path}.woff') format('woff'), 
+//       url('#{$file-path}.ttf') format('truetype'), 
+//       url('#{$file-path}.svg##{$font-family}') format('svg'); 
+//       font-weight: $font-weight; 
+//       font-style: $font-style; 
+//     }  
+// }      
