@@ -243,14 +243,61 @@
 </section>
 
 <section class="resaurant-order">
+
 	<div class="container">
 		<form action="" class="orderform center-block">
-			<fieldset>
-				<label for="">sss</label>
-				<select class="order-select"><option>Item 1</option><option>Item 2</option><option>Item 3</option><option>Item 4</option><option>Item 5</option></select>
+			<h2>Заказать столик</h2>
+			<fieldset class="date">
+				<label for="">Дата</label>
+				<select class="order-select">
+					<option>29 сентября</option>
+					<option>9 сентября</option>
+					<option>14 марта</option>
+					<option>30 марта</option>
+				</select>
+			</fieldset>
+
+			<fieldset class="time">
+				<label for="">Время</label>
+				<select class="order-select">
+					<option>14:30</option>
+					<option>14:30</option>
+					<option>14:30</option>
+					<option>14:30</option>
+				</select>
+			</fieldset>
+
+			<fieldset class="place-quantity">
+				<label for="">Количество мест</label>
+				<select class="order-select">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+				</select>
+			</fieldset>
+
+			<fieldset class="name">
+				<label for="">Имя</label>
+				<input type="text" class="order-name" name="order-name" placeholder="Введите свое имя">
+			</fieldset>
+
+			<fieldset class="phone">
+				<label for="">Телефон</label>
+				<input type="text" class="order-name" name="order-name" placeholder="Введите свой телефон">
+			</fieldset>
+			<fieldset class="submit">
+				<input type="submit" value="Оставить заявку">
 			</fieldset>
 		</form>
 	</div>
+</section>
+
+
+<section class="mapsection">
+	<div id="map"></div>
 </section>
 
 

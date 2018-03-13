@@ -1034,44 +1034,100 @@ border-radius: 10px;
   .resaurant-order {
     width: 100%;
     min-height: 500px;
-    background: url(../img/bbq-slider2.jpg) no-repeat scroll 0 0 / cover;
+    position: relative;
+    margin-bottom: 90px;
+    &:after {
+      content: "";
+      position: absolute;
+      background: url(../img/bbq-slider2.jpg) no-repeat scroll 0 0 / cover;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      filter: blur(1.3px);
+      -webkit-filter: blur(1.3px);
+    }
+
+  }
+
+  fieldset {
+    float: left;
+    label {
+      display: block;
+      // color: red;
+    }
   }
 
   .orderform {
+    position: relative;
+    z-index: 4;
     width: 550px;
+    padding: 50px;
+    box-sizing: border-box;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.02);
-
-
-    .order-select {
-      width: 215px;
-      height: 35px;
-      border-radius: 5px;
-      border: solid 1px #d8d8d8;
-      -webkit-appearance: none;
-      background-image: url('../img/arrow.svg');
-      background-position: 97% center;
-      background-repeat: no-repeat;
-      // line-height: 1em;
-      /* for FF */
-      -moz-appearance: none;
-      text-indent: 0.01px;
-      text-overflow: '';
-      /* for IE */
-      -ms-appearance: none;
-      appearance: none!important;
-
-
-      font: 400 14px/35px AvenirNext,sans-serif;
-      font-size: 14px;
-      text-align: left;
+    display: table;
+    margin-top: 50px;
+    h2 {
+      width: 100%;
+      font: 600 36px/36px AvenirNext,sans-serif;
+      text-align: center;
       color: #474747;
-      padding: 0 10px;
+      margin-bottom: 40px;
+    }
+    .date {
+      .order-select {
+        width: 180px;
+      }
     }
 
+    .time {
+      margin: 0 18px;
+      .order-select {
+        width: 113px;
+      }
+    }
 
+    .place-quantity {
+      .order-select {
+        width: 115px;
+      }
+    }
 
+    .name, .phone {
+      margin-top: 20px;
+      width: calc(50% - 10px);
+
+      input {
+        width: 100%;
+        max-width: 215px;
+        height: 35px;
+        border-radius: 5px;
+        border: solid 1px #d8d8d8;
+        padding: 9px;
+      }
+    }
+
+    .name {
+      margin-right: 20px;
+    }
+
+    .submit {
+      width: 100%;
+      input {
+        display: table;
+        margin: 40px auto 0;
+        width: 180px;
+        height: 40px;
+        background-color: #10b4a4;
+        box-shadow: 0 3px 0 0 #0a6a60;
+        text-align: center;
+        font: 600 16px/40px AvenirNext,sans-serif;
+        color: #fff;
+        border: none;
+      }
+    }
   }
 
   @import "media";
