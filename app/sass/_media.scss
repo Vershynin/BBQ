@@ -13,35 +13,6 @@
 
 @media only screen and (max-width : 1199px) {
 
-  // #services-section {
-  //     width: 100%;
-  //     height: auto;
-  //     background: #000;
-  //     display: table;
-  //     padding: 50px 0;
-  // }
-  //
-  // .serviceslist li {
-  //     width: 48%;
-  //     margin-right: 20px;
-  // }
-  //
-  // .serviceslist li:nth-child(-n+3) {
-  //     margin-top: 0;
-  // }
-  //
-  // .serviceslist li:nth-child(n+4) {
-  //   margin-bottom: 0;
-  // }
-  //
-  // .serviceslist li:nth-child(3n) {
-  //   margin-right: 20px;
-  // }
-  //
-  // .serviceslist li:nth-child(2n) {
-  //   margin-right: 0;
-  // }
-
   .header-phone {
       margin-right: 30px;
   }
@@ -69,39 +40,18 @@
   }
 }
 
+.swiper .swiper-slide img {
+  object-fit: cover;
+}
+
 
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    // .footer-contacts li {
-    //     font: 700 18px/28px PT Sans Narrow,sans-serif;
-    // }
+
 }
 
 @media only screen and (max-width : 992px) {
-
-  // #navbar-primary .navbar-nav > li > a {
-  //     padding-left: 20px;
-  //     padding-right: 20px;
-  // }
-
-  // .aboutus-block {
-  //   position: static;
-  //   margin: 0 auto 10px;
-  // }
-
-  // #services-section {
-  //   margin-top: 30px;
-  // }
-
-  // .imgwrap {
-  //   img {
-  //     display: block;
-  //     margin: 0 auto;
-  //   }
-  // }
-
-
   #navbar-primary .navbar-nav > li {
     display: table;
     float: none;
@@ -194,112 +144,9 @@
 }
 
 
-  // .aboutus-items {
-  //   width: 100%;
-  //   margin: 0;
-  // }
-
-//   #aboutus-section .aboutus-items li {
-//     width: 90%;
-//     margin: 0 auto 30px;
-//   }
-//   #aboutus-section .aboutus-items li:last-of-type {
-//     width: 90%;
-//     margin: 0 auto 30px;
-// }
-
-// input::-webkit-input-placeholder{ /* Chrome/Opera/Safari */
-//   font: 400 16px/40px 'OpenSans', sans-serif;
-//   text-align: left;
-//   color: #9b9b9b;
-// }
-// input::-moz-placeholder { /* Firefox 19+ */
-//   font: 400 16px/40px 'OpenSans', sans-serif;
-//   text-align: left;
-//   color: #9b9b9b;
-// }
-// input:-ms-input-placeholder { /* IE 10+ */
-//   font: 400 16px/40px 'OpenSans', sans-serif;
-//   text-align: left;
-//   color: #9b9b9b;
-// }
-// input:-moz-placeholder  { /* Firefox 18- */
-//   font: 400 16px/40px 'OpenSans', sans-serif;
-//   text-align: left;
-//   color: #9b9b9b;
-// }
-
-// .aboutus-block {
-//   position: static;
-//   margin: 0 auto 10px;
-// }
-//
-// #services-section {
-//   margin-top: 30px;
-// }
-
-// .imgwrap {
-//   img {
-//     display: block;
-//     margin: 0 auto;
-//   }
-// }
-
-// #navbar-primary .navbar-nav > li > a {
-//     padding-left: 18px;
-//     padding-right: 18px;
-// }
-
 }
 
 @media only screen and (max-width : 767px) {
-
-  // .icon-bar {
-  //   background: #fff;
-  // }
-
-
-  // .logo-center a {
-  //     padding-left: 18px !important;
-  // }
-  //
-  //
-  // #menu {
-  //   width: 100%;
-  //   display: table;
-  //   li {
-  //     width: 100%;
-  //     float: none;
-  //     clear: both;
-  //     display: block;
-  //     padding-right: 0;
-  //     &:after {
-  //       content: none;
-  //     }
-  //   }
-  // }
-
-//   .navbar-nav {
-//     margin: 0;
-// }
-
-  // .logo-center {
-  //
-  //   padding-top: 50px;
-  //   padding-bottom: 50px;
-  //   a {
-  //     text-align: center;
-  //     pointer-events: none;
-  //
-  //   }
-  // }
-
-  // header .nav > li > a:hover {
-  //   &:before {
-  //     content: none;
-  //   }
-  // }
-
 
 }
 
@@ -322,6 +169,10 @@
   .breadcrumbs-top li {
     //padding: 25px 0;
     margin-bottom: 10px;
+  }
+
+  .orderform {
+    width: 90%;
   }
 }
 
@@ -361,14 +212,34 @@ footer {
   }
 }
 
+  .orderform {
+    fieldset {
+        margin-top: 15px;
+        float: none;
+        clear: both;
+        width: 100%;
+        select, input {
+          width: 100%;
+          max-width: 100%;
+        }
+    }
 
-  // .aboutus-block {
-  //     padding: 20px;
-  // }
-  //
-  // .solution {
-  //   padding: 30px;
-  // }
+    .time {
+      margin: 15px 0 0 0;
+    }
+
+    .name, .phone {
+      margin-top: 15px;
+      width: 100%;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+.orderform .date .order-select {
+  width: 100%;
+  }
+
 }
 
 @media only screen and (max-width : 480px) {
@@ -390,110 +261,21 @@ footer {
     float: none;
     clear: both;
     margin: 0 auto;
-}
+  }
+
+  .resaurant-order {
+    padding-bottom: 50px;
+  }
 
 
 }
 
 @media only screen and (max-width : 690px) {
-  // .serviceslist {
-  //   display: table;
-  //   width: 100%;
-  //   li {
-  //     margin: 0 auto 20px !important;
-  //     display: table;
-  //     width: 90%;
-  //     float: none;
-  //     clear: both;
-  //   }
-  // }
 
-  // .serviceslist li:nth-child(-n+3) {
-  //   margin: 0 auto 20px !important;
-  //   display: table;
-  //   width: 90%;
-  // }
-
-  // .serviceslist li:nth-child(n+4) {
-  //   margin: 0 auto 20px !important;
-  //   display: table;
-  //   width: 90%;
-  // }
-
-  // .serviceslist li:nth-child(3n) {
-  //   margin: 0 auto 20px !important;
-  //   display: table;
-  //   width: 90%;
-  // }
-
-  // .serviceslist li:nth-child(2n) {
-  //   margin: 0 auto 20px !important;
-  //   display: table;
-  //   width: 90%;
-  // }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-  // .serviceslist li {
-  //     padding-left: 15px;
-  //     padding-right: 15px;
-  // }
-
-  // #solution-section {
-  //   margin-top: 30px;
-  // }
-
-  // .usersection-description {
-  //   width: auto;
-  //   max-width: 100%;
-  //   margin: 0 auto 100px;
-  //   position: relative;
-  //   z-index: 6;
-  // }
-
-  // .usersection-header {
-  //   margin-top: 100px;
-  //   position: relative;
-  //   z-index: 6;
-  // }
-
-  // .usersection {
-  //   position: relative;
-  //
-  //   &:after {
-  //     content: "";
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     width: 100%;
-  //     height: 100%;
-  //     background: rgba(0, 0, 0, 0.4);
-  //     z-index: 5;
-  //   }
-  // }
-
-
-  // input::-webkit-input-placeholder{ /* Chrome/Opera/Safari */
-  //   font: 400 16px/44px 'OpenSans', sans-serif;
-  //   text-align: left;
-  //   color: #9b9b9b;
-  // }
-  // input::-moz-placeholder { /* Firefox 19+ */
-  //   font: 400 16px/44px 'OpenSans', sans-serif;
-  //   text-align: left;
-  //   color: #9b9b9b;
-  // }
-  // input:-ms-input-placeholder { /* IE 10+ */
-  //   font: 400 16px/44px 'OpenSans', sans-serif;
-  //   text-align: left;
-  //   color: #9b9b9b;
-  // }
-  // input:-moz-placeholder  { /* Firefox 18- */
-  //   font: 400 16px/44px 'OpenSans', sans-serif;
-  //   text-align: left;
-  //   color: #9b9b9b;
-  // }
 
   .bbq-header {
       font: 600 31px/33px AvenirNext,sans-serif;
@@ -551,6 +333,10 @@ footer {
   .urich-logo span {
     font-size: 13px;
   }
+
+  .orderform h2 {
+      font: 600 25px/25px AvenirNext, sans-serif;
+  }
 }
 
 @media only screen and (min-width: 561px) and  (max-width: 991px) {
@@ -576,7 +362,9 @@ footer {
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-
+  .orderform h2 {
+      font: 600 23px/23px AvenirNext,sans-serif;
+  }
 }
 /*==========  Mobile First  ==========*/
 /* Custom, iPhone Retina */

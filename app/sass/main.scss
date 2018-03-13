@@ -1050,17 +1050,11 @@ border-radius: 10px;
 
   }
 
-  fieldset {
-    float: left;
-    label {
-      display: block;
-      // color: red;
-    }
-  }
+
 
   .orderform {
     position: relative;
-    z-index: 4;
+    z-index: 3;
     width: 550px;
     padding: 50px;
     box-sizing: border-box;
@@ -1069,6 +1063,16 @@ border-radius: 10px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.02);
     display: table;
     margin-top: 50px;
+
+    fieldset {
+      float: left;
+      label {
+        display: block;
+        font: 500 14px/16px AvenirNext,sans-serif;
+        color: #474747;
+      }
+    }
+
     h2 {
       width: 100%;
       font: 600 36px/36px AvenirNext,sans-serif;
