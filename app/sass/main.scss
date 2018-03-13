@@ -7,6 +7,10 @@ body {
 }
 
 #mainpage {
+  .search-ico {
+    fill: #fff;
+  }
+
   .search-open {
     background: url(../img/cross-mainpage.svg) no-repeat scroll center center !important;
     svg {
