@@ -1,3 +1,5 @@
+  @import "helpers";
+
 html {
   overflow-x: hidden;
 }
@@ -1184,8 +1186,175 @@ border-radius: 10px;
         font: 600 16px/40px AvenirNext,sans-serif;
         color: #fff;
         border: none;
+
       }
     }
+  }
+
+  .testdiv {
+    width: 100%;
+    background: #f00;
+    display: table;
+    height: 500px;
+  }
+
+  .form-corporatedinner {
+    // display: table;
+
+    input[type="text"], input[type="email"] {
+      height: 35px;
+      border-radius: 5px;
+      border: solid 1px #d8d8d8;
+      font: 500 14px/35px AvenirNext,sans-serif;
+      text-align: left;
+      color: #d8d8d8;
+      width: 100%;
+      padding:  0 10px;
+      @include placeholder {
+        color: #d8d8d8;
+        font: 400 14px/35px AvenirNext,sans-serif;
+      }
+    }
+    .corporatedinner-select {
+      width: calc(50% - 10px);
+      float: left;
+      select {
+        width: 100%;
+      }
+    }
+
+    .payment-method {
+      margin-right: 20px;
+    }
+
+
+    label {
+      display: block;
+      font: 500 14px/15px AvenirNext,sans-serif;
+      text-align: left;
+      color: #474747;
+    }
+
+    fieldset {
+      margin-bottom: 15px;
+    }
+
+    .name {
+      margin-right: 20px;
+    }
+
+    .name, .phone {
+      width: calc(50% - 10px);
+      float: left;
+    }
+
+    .email {
+      width: 100%;
+    }
+
+    // .corporatedinner-select {
+    //   width: calc(50% - 10px);
+    //   float: left;
+    //   &:first-of-type {
+    //     margin-right: 20px;
+    //   }
+    // }
+
+    .dinner-textarea {
+      width: 100%;
+      max-width: 100%;
+      textarea {
+        border-radius: 5px;
+        background-color: #fff;
+        border: solid 1px #d8d8d8;
+        padding: 15px;
+        resize: vertical;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-height: 125px;
+      }
+    }
+
+    .customradio {
+      span {
+
+        input[type="radio"] {
+            display:none;
+        }
+
+        input[type="radio"] + label span {
+          display:inline-block;
+          border-radius: 50%;
+          width: 14px;
+          height: 14px;
+          border: solid 1px #d8d8d8;
+          cursor:pointer;
+          position: relative;
+        }
+
+        input[type="checkbox"]:checked + label span::before {
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 8px;
+            height: 8px;
+            background-color: #474747;
+            content: "";
+            border-radius: 50%;
+
+        }
+      }
+      // span {
+      //   label {
+      //     display: inline;
+      //     position: relative;
+      //     &:before {
+      //       content: "";
+      //       position: absolute;
+      //       left: 0;
+      //       top: 0;
+      //       width: 14px;
+      //       height: 14px;
+      //       border: solid 1px #d8d8d8;
+      //     }
+      //   }
+      //
+      //   input[type=radio] + label:before {
+      //     content: "\26AB";
+      //     border: 1px solid #d8d8d8;
+      //     border-radius: 50%;
+      //     display: inline-block;
+      //
+      //     font-size: 14px;
+      //     line-height: 14px;
+      //     margin: -5px 5px 0 0;
+      //     height: 14px;
+      //     width: 14px;
+      //     text-align: center;
+      //     vertical-align: middle;
+      //     font-size: 0;
+      //
+      //   }
+      //
+      //   input[type=radio]:checked + label:before {
+      //     font-size: 14px;
+      //     // background: #f40;
+      //   }
+      //
+      //   input[type=radio] {
+      //     position: absolute;
+      //     visibility: hidden;
+      //     opacity: 0;
+      //   }
+      // }
+
+
+    }
+
+
+
   }
 
   @import "media";

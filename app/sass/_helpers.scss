@@ -42,7 +42,7 @@ a {
   border: none;
 }
 
-@mixin inputPlaceholder() {
+@mixin placeholder() {
     $selector: '';
     $prefixes: (
         moz: "::-moz",
@@ -69,3 +69,11 @@ a {
       @content;
     }
 }
+
+
+// @mixin placeholder {
+//   &::-webkit-input-placeholder {@content}
+//   &:-moz-placeholder           {@content}
+//   &::-moz-placeholder          {@content}
+//   &:-ms-input-placeholder      {@content}
+// }

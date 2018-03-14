@@ -11,6 +11,7 @@
   height: 100%;
   display: table;
   z-index: 5;
+  transition: all 1s ease-in;
 }
 
 .custom-topnav {
@@ -184,9 +185,6 @@ header #navbar-primary .navbar-nav > li > a {
       font: 400 14px/35px AvenirNext,sans-serif;
       text-align: left;
       color: #474747;
-      @include inputPlaceholder() {
-          color: #d8d8d8;
-      }
     }
     label {
       font: 500 14px/15px AvenirNext,sans-serif;
