@@ -1278,77 +1278,24 @@ border-radius: 10px;
 
     .customradio {
       span {
+        width: 300px;
+        display: table;
 
-        input[type="radio"] {
+         input[type="radio"] {
             display:none;
-        }
+          }
 
-        input[type="radio"] + label span {
-          display:inline-block;
-          border-radius: 50%;
-          width: 14px;
-          height: 14px;
-          border: solid 1px #d8d8d8;
-          cursor:pointer;
-          position: relative;
-        }
+          label {
+              display:inline-block;
+              background: transparent url("../img/rb-empty.svg") no-repeat scroll left center;
+              padding-left: 30px;
+          }
 
-        input[type="checkbox"]:checked + label span::before {
+          input[type="radio"]:checked + label {
+              background: transparent url("../img/rb-full.svg") no-repeat scroll left center;
+          }
 
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 8px;
-            height: 8px;
-            background-color: #474747;
-            content: "";
-            border-radius: 50%;
 
-        }
-      }
-      // span {
-      //   label {
-      //     display: inline;
-      //     position: relative;
-      //     &:before {
-      //       content: "";
-      //       position: absolute;
-      //       left: 0;
-      //       top: 0;
-      //       width: 14px;
-      //       height: 14px;
-      //       border: solid 1px #d8d8d8;
-      //     }
-      //   }
-      //
-      //   input[type=radio] + label:before {
-      //     content: "\26AB";
-      //     border: 1px solid #d8d8d8;
-      //     border-radius: 50%;
-      //     display: inline-block;
-      //
-      //     font-size: 14px;
-      //     line-height: 14px;
-      //     margin: -5px 5px 0 0;
-      //     height: 14px;
-      //     width: 14px;
-      //     text-align: center;
-      //     vertical-align: middle;
-      //     font-size: 0;
-      //
-      //   }
-      //
-      //   input[type=radio]:checked + label:before {
-      //     font-size: 14px;
-      //     // background: #f40;
-      //   }
-      //
-      //   input[type=radio] {
-      //     position: absolute;
-      //     visibility: hidden;
-      //     opacity: 0;
-      //   }
-      // }
 
 
     }
