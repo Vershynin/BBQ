@@ -8,6 +8,7 @@ $(document).ready(function () {
 
     $('.menu_icon, .close').on('click', function(){
     	$('.menu-mobile--itself').toggleClass('show');
+        	$('.main-overlay').toggleClass('overlayed');
 
       setTimeout(function() {
         //  $('body').toggleClass('body-overflow');
@@ -31,6 +32,7 @@ $(document).ready(function () {
       if (container.has(e.target).length === 0){
         //  container.hide();
         $('.menu-mobile--itself').removeClass('show');
+        $('.main-overlay').removeClass('overlayed');
         setTimeout(function() {
           $('body').removeClass('body-overflow');
         }, 200);
