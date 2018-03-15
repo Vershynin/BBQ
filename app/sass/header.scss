@@ -80,7 +80,7 @@ header #navbar-primary .navbar-nav > li > a {
       margin-right: 24px;
     }
 
-    &:hover {
+    &:hover, &:active, &:visited, &:focus {
       color: #fff;
       text-decoration: none;
     }
