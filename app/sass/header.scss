@@ -25,6 +25,14 @@
 
 .logo-center {
   margin: 0 140px;
+  a {
+    background: transparent;
+    text-decoration: none;
+    &:hover, &:active, &:focus, &:visited {
+      background: transparent;
+      text-decoration: none;
+    }
+  }
 }
 
 .header-phone {
