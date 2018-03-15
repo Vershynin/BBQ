@@ -1271,8 +1271,12 @@ border-radius: 10px;
 
     .customradio {
       span {
-        width: 300px;
         display: table;
+        float: left;
+        margin-right: 20px;
+        &:last-of-type {
+          margin-right: 0;
+        }
 
         input[type="radio"] {
            display:none;
@@ -1289,7 +1293,6 @@ border-radius: 10px;
          }
       }
     }
-
   }
 
 
