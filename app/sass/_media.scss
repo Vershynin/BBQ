@@ -128,7 +128,7 @@
   }
 
   &:after {
-    content: "menu";
+    content: "меню";
     position: absolute;
     left: -80px;
     top: 6px;
@@ -288,6 +288,10 @@ footer {
 
   #trailer {
     display: table;
+  }
+
+  .form-corporatedinner .customradio span {
+    width: 100%;
   }
 
 
