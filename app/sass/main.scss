@@ -1206,7 +1206,7 @@ border-radius: 10px;
       border: solid 1px #d8d8d8;
       font: 500 14px/35px AvenirNext,sans-serif;
       text-align: left;
-      color: #d8d8d8;
+      color: #474747;
       width: 100%;
       padding:  0 10px;
 
@@ -1266,10 +1266,21 @@ border-radius: 10px;
         width: 100%;
         max-width: 100%;
         min-height: 125px;
+        color: #474747;
+        font: 500 14px/20px AvenirNext,sans-serif;
+        @include placeholder {
+          color: #d8d8d8;
+          font: 400 14px/20px AvenirNext,sans-serif;
+        }
       }
     }
 
     .customradio {
+      width: 70%;
+      float: left;
+      label {
+        margin-bottom: 10px;
+      }
       span {
         display: table;
         float: left;
@@ -1292,6 +1303,49 @@ border-radius: 10px;
              background: transparent url("../img/rb-full.svg") no-repeat scroll left center;
          }
       }
+    }
+
+    .dinner-itemcount {
+      .order-select {
+        max-width: 163px;
+        width: 100%;
+      }
+    }
+
+    .complects-count {
+      display: table;
+      span {
+        display: table;
+      }
+
+      .complects-items {
+        float: left;
+      }
+      .complects-price {
+        float: right;
+      }
+    }
+
+    .complects-count-typo {
+      font: 500 15px/17px AvenirNext,sans-serif;
+      color: #7e7e7e;
+    }
+    .complects-count-payment {
+      font: 600 19px/20px AvenirNext,sans-serif;
+      color: #474747;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      height: 48px;
+      border: none;
+      background-color: #10b4a4;
+      box-shadow: 0 3px 0 0 #0a6a60;
+      font: 600 18px/48px AvenirNext,sans-serif;
+      text-align: center;
+      color: #fff;
+      display: block;
+      margin-top: 20px;
     }
   }
 

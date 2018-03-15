@@ -239,7 +239,9 @@
 
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
 				<fieldset class="customradio">
+					<label for="">Вид подписки</label>
 					<span>
 						<input type="radio" id="dinner-oneweek" name="dinner-period">
 						<label for="dinner-oneweek">одна неделя</label>
@@ -252,40 +254,37 @@
 						<input type="radio" id="dinner-month" name="dinner-period">
 						<label for="dinner-month">месяц</label>
 					</span>
+				</fieldset>
 
-
-
-					<!-- <label for="dinner-oneweek" class="radio">
-				  	<input type="radio" id="dinner-oneweek" name="dinner-period">
-				  	<div class="radio__text">одна неделя</div>
-					</label>
-
-					<label for="dinner-twoweek" class="radio">
-						<input type="radio" id="dinner-twoweek" name="dinner-period">
-						<div class="radio__text">две недели</div>
-					</label>
-
-					<label for="dinner-month" class="radio">
-						<input type="radio" id="dinner-month" name="dinner-period">
-						<div class="radio__text">месяц</div>
-					</label> -->
-
-
-				<!-- <span>
-					<input type="radio" id="r1" name="rr" />
-					<label for="r1"><span></span>Radio Button 1</label>
-				</span> -->
+				<fieldset class="dinner-itemcount">
+					<label for="">Количество комплектов</label>
+					<select class="order-select">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+					</select>
 				</fieldset>
 
 				<fieldset class="dinner-textarea">
 						<label for="">Комментарии</label>
 						<textarea name="comment" placeholder="Комментарии к заказу"></textarea>
 				</fieldset>
-				<fieldset class="complects-count">
+				<fieldset class="complects-count complects-count-typo">
 					<span class="complects-items">5 комплектов</span>
 					<span class="complects-price">750 грн</span>
 				</fieldset>
-
+				<fieldset class="complects-count complects-count-payment">
+					<span class="complects-items">Итого к оплате</span>
+					<span class="complects-price">3750 грн</span>
+				</fieldset>
+				<input id="form-corporatedinner" value="Оформить заказ" class="corporatedinner-ordersubmit" type="submit">
 			</div>
 		</form>
 		</div>
