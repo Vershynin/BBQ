@@ -103,6 +103,14 @@
       padding-bottom: 25px;
     }
   }
+
+  #trailer > video {
+    display: none;
+  }
+
+  #trailer {
+    background: url(../img/video-pic.jpg) no-repeat scroll 0 0 / cover;
+  }
 }
 
 @media only screen and (max-width : 768px) {
