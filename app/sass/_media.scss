@@ -326,7 +326,25 @@ footer {
 
 
   .slogan-top {
-    font: 500 20px/36px AvenirNext,sans-serif;
+    font: 500 19px/27px AvenirNext,sans-serif;
+    margin-top: 20px;
+  }
+
+  .top-buttons-wrap {
+    display: table;
+    margin: 20px auto 0;
+  }
+
+  .orderform .time .order-select, .orderform .place-quantity .order-select {
+    width: 100%;
+  }
+
+  .orderform .name input, .orderform .phone input {
+    max-width: 100%;
+  }
+
+  .orderform {
+    padding: 30px;
   }
 
 }
@@ -380,6 +398,24 @@ footer {
   .week-item {
     padding: 13px;
   }
+
+  .cart-singleitem .item-name {
+	width: 70%;
+  }
+
+  .bbq-header {
+    font: 600 29px/31px AvenirNext,sans-serif;
+  }
+
+  .freedelivery-block {
+	  font: 600 14px/25px AvenirNext,sans-serif;
+  }
+
+  .order-contact p {
+    width: 100%;
+    float: none;
+    display: table;
+  }
 }
 
 @media only screen and (min-width: 561px) and  (max-width: 991px) {
@@ -410,6 +446,14 @@ footer {
 @media only screen and (max-width : 320px) {
   .orderform h2 {
       font: 600 23px/23px AvenirNext,sans-serif;
+  }
+
+  .cart-singleitem .item-name {
+    width: 64%;
+  }
+
+  .bbq-header {
+    font: 600 27px/29px AvenirNext,sans-serif;
   }
 }
 /*==========  Mobile First  ==========*/

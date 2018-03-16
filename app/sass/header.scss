@@ -26,10 +26,12 @@
 .logo-center {
   margin: 0 140px;
   a {
+    padding: 0 !important;
+    margin: 0;
     background: transparent;
     text-decoration: none;
     &:hover, &:active, &:focus, &:visited {
-      background: transparent;
+      background: transparent !important;
       text-decoration: none;
     }
   }
