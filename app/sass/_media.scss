@@ -12,7 +12,7 @@
 
 @media only screen and (max-width : 1300px) {
   .logo-center {
-    margin: 0 97px;
+    margin: 0 80px;
   }
 }
 
@@ -26,6 +26,10 @@
 
   .logo-center {
       margin: 0 30px;
+  }
+
+  .callback-form input[type="tel"], .callback-form input[type="text"] {
+    width: 26%;
   }
 }
 @media only screen and (max-width : 1000px) {
@@ -51,6 +55,26 @@
   object-fit: cover;
 }
 
+.logo-center {
+    margin: 0 10px;
+}
+
+.header-phone {
+    margin-right: 15px;
+}
+
+.work-time {
+    margin-right: 15px;
+    padding-left: 28px;
+}
+
+body {
+  background: url(../img/pattern.png) repeat scroll 0 0 / 70%;
+}
+
+.menupage-oneitem {
+    background: #10b4a4 url(../img/pattern-green.png) repeat scroll 0 0/ 70%;
+}
 
 }
 
@@ -118,6 +142,38 @@
   #trailer {
     background: url(../img/video-pic.jpg) no-repeat scroll 0 0 / cover;
   }
+
+  .callback-form {
+    width: 50%;
+    padding: 60px 30px 30px 30px;
+    display: table;
+    position: relative;
+    margin: 0 auto;
+    input[type="tel"], input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+        float: none;
+        clear: both;
+        margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      max-width: 100%;
+    }
+
+    #callback-close {
+      position: absolute;
+      right: 5px;
+      top: 0;
+      margin: 0;
+    }
+  }
+
+  // .callback-form input[type="tel"], .callback-form input[type="text"] {
+  //   width: 25%;
+  //   padding: 0 10px;
+  //   margin-right: 15px;
+  // }
 }
 
 @media only screen and (max-width : 768px) {
@@ -189,6 +245,10 @@
   .orderform {
     width: 90%;
   }
+
+  .search-form fieldset input[type="text"] {
+    padding-right: 50px;
+  }
 }
 
 
@@ -254,6 +314,8 @@ footer {
 .orderform .date .order-select {
   width: 100%;
   }
+
+
 
 }
 
