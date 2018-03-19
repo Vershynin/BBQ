@@ -374,23 +374,61 @@ function initMap() {
 
      $('.bbq-item-order').on('click', function(){
 
-     		var that = $(this).closest('.recommended-oneitem').find('img');
-     		// var bascket = $(".menu_icon");
-     		// var w = that.width();
 
-        // TweenLite.to(that, 2, {left:"542px",
+//.find("#mychilddivid3").text("text2");
+
+
+     		//var that = $(this).closest('.recommended-oneitem').find('img');
+
+        var that = $(this).parent().find('.animfind');
+
+        //that.clone().addClass('itmcopy').appendTo("body");
+
+
+
+$(this).parent().find('.animfind').clone().attr('id', 'animation-el').appendTo($(this).parent().find('a')[0]);
+imgFly = document.getElementById("animation-el");
+
+// imgFly.animate({
+//         left: '3000px',
+//     });
+TweenMax.to(imgFly, 3, { x:1500 , opacity:0 , ease:Power1.easeInOut   });
+
+        //newpic = $('copy');
+
+        //TweenLite.to(bascket, 10, {left:"632px"});
+          //console.log(that);
+          //that.clone();
+
+
+
+              //TweenMax.to(that, 3, { x:1500 , opacity:0 , ease:Power1.easeInOut   });
+
+          // TweenLite.to(that, 10, {
+          //   left:"0",
+          //   top: "50%",
+          //   position: "absolute",
+          //   z-index: "999999",
+          //   scale: "0.4",
+          // });
+
+     		var bascket = $(".ic-cart-custom");
+     		var w = that.width();
+        //  that.clone();
+
+
+
+
+          //TweenMax.to(that, 10, {opacity: 0});
+
+
+        // TweenLite.to(that, 20, {left:"542px",
         //                         position:"absolute"
         //                        backgroundColor:"black",
         //                        borderBottomColor:"#90e500",
         //                        color:"white"});
 
-          // TweenLite.to(that, 1, {
-          //   left:"0",
-          //   top: "50%",
-          //   position: "absolute",
-          //   z-index: "999999",
-          //   scale: "0.4"
-          // });
+
      	});
 
 
