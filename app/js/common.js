@@ -385,23 +385,22 @@ function initMap() {
         $(this).parent().find('.animfind').clone().attr('id', 'animation-el').appendTo($(this).parent().find('a')[0]);
 
 
-        //imgFly = document.getElementById("animation-el");
+        imgFly = document.getElementById("animation-el");
         cartLabel = document.getElementById("cart_animation");
 
 
         var hCenter = (window.clientHeight) / 2;
 
-        function getCoords(elem) { 
-            var box = elem.getBoundingClientRect();
-
-            return {
-              top: box.top + pageYOffset,
-              left: box.left + pageXOffset
-            };
+        function getOffset(el) {
+          el = el.getBoundingClientRect();
+          return {
+            left: el.left + window.scrollX,
+            top: el.top + window.scrollY
           }
+        }
 
-          var aaa = getCoords(that);
-          console.log('aaa= ' + aaa);
+      var test = getOffset(imgFly).top;
+      console.log(test);
 
         // var currentEl = $(this).offset().top - $(window).scrollTop();
         // var dist = hCenter - currentEl;
@@ -414,7 +413,7 @@ function initMap() {
         //   alert( '22' );
         // }
 
-        alert('offset = ' + currentEl);
+        //alert('offset = ' + currentEl);
 
         TweenMax.to(imgFly, 2, { x:1500, y: hCenter, scale:0.3, opacity:0 , ease:Power4.easeInOut   });
         setTimeout(function() { imgFly.remove() }, 2000);
