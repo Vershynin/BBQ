@@ -498,7 +498,7 @@ header {
   grid-auto-rows: minmax(340px, auto);
 }
 
- {
+.grid-item {
   background: #fff;
   border-radius: 10px;
   position: relative;
@@ -535,6 +535,14 @@ header {
   .bbq-item-order {
     cursor: pointer;
     position: absolute;
+    // position: static;
+    // display: -webkit-flex;
+    // display: -ms-flex;
+    // display: flex;
+    // align-self: flex-end;
+    // flex-direcrion: column;
+    // flex-wrap: wrap;
+
     bottom: 20px;
     right: 50px;
     width: 130px;
@@ -1357,18 +1365,27 @@ border-radius: 10px;
 
   //----------------------CART-FLY-ANIMATION-----------------------
 
+  .anim-picwrap {
+      position: relative;
+      display: table;
+      width: 100%;
+  }
+
+
   .animfind {
     position: relative;
 
-    #animation-el {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      display: table;
-      z-index: 999999;
-    }
+
+  }
+
+  #animation-el {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: table;
+    z-index: 999999;
   }
 
 

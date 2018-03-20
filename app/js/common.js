@@ -101,6 +101,7 @@ $(document).ready(function () {
 
 
 //--------------INPUT-NUMBER-STYLING------------------------
+
 function catalogItemCounter(field){
 
 			var fieldCount = function(el) {
@@ -381,18 +382,75 @@ function initMap() {
      		//var that = $(this).closest('.recommended-oneitem').find('img');
 
         var that = $(this).parent().find('.animfind');
+        $(this).parent().find('.animfind').clone().attr('id', 'animation-el').appendTo($(this).parent().find('a')[0]);
+
+
+        //imgFly = document.getElementById("animation-el");
+        cartLabel = document.getElementById("cart_animation");
+
+
+        var hCenter = (window.clientHeight) / 2;
+
+        function getCoords(elem) { 
+            var box = elem.getBoundingClientRect();
+
+            return {
+              top: box.top + pageYOffset,
+              left: box.left + pageXOffset
+            };
+          }
+
+          var aaa = getCoords(that);
+          console.log('aaa= ' + aaa);
+
+        // var currentEl = $(this).offset().top - $(window).scrollTop();
+        // var dist = hCenter - currentEl;
+        //
+        // if (dist > hCenter) {
+        //   alert( '11' );
+        //     hCenter =-hCenter;
+        //
+        // } else {
+        //   alert( '22' );
+        // }
+
+        alert('offset = ' + currentEl);
+
+        TweenMax.to(imgFly, 2, { x:1500, y: hCenter, scale:0.3, opacity:0 , ease:Power4.easeInOut   });
+        setTimeout(function() { imgFly.remove() }, 2000);
+
+
+
+        //currentEl = $(this).offset().top - $(window).scrollTop;
+
+        //var distance = imgFly.offsetTop - imgFly.offsetTop - cartLabel.offsetHeight;
+      //  var distance = imgFly.offsetTop;
+        //var distance = event.clientY;
+
+        //$('#imgFly').offset().top - $('#cart_animation').offset().top - $('#cart_animation').outerHeight()
+
+
+
+        //screen.height
+
+
+
+
+    //    console.log(distance);
+
+
+
 
         //that.clone().addClass('itmcopy').appendTo("body");
 
 
 
-$(this).parent().find('.animfind').clone().attr('id', 'animation-el').appendTo($(this).parent().find('a')[0]);
-imgFly = document.getElementById("animation-el");
+
 
 // imgFly.animate({
 //         left: '3000px',
 //     });
-TweenMax.to(imgFly, 3, { x:1500 , opacity:0 , ease:Power1.easeInOut   });
+
 
         //newpic = $('copy');
 
