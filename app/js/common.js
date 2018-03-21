@@ -389,7 +389,16 @@ function initMap() {
         cartLabel = document.getElementById("cart_animation");
 
 
-        var hCenter = (window.clientHeight) / 2;
+        //var hCenter = window.clientHeight;
+
+
+        var hScreen = "innerHeight" in window
+               ? window.innerHeight
+               : document.documentElement.offsetHeight;
+
+               hScreen = hScreen / 2;
+
+
 
         function getOffset(el) {
           el = el.getBoundingClientRect();
@@ -399,23 +408,32 @@ function initMap() {
           }
         }
 
-      var test = getOffset(imgFly).top;
-      console.log(test);
+      var imgOffcet = getOffset(imgFly).top;
+      var hCenter = getOffset(cartLabel).top;
+
 
         // var currentEl = $(this).offset().top - $(window).scrollTop();
-        // var dist = hCenter - currentEl;
-        //
-        // if (dist > hCenter) {
-        //   alert( '11' );
-        //     hCenter =-hCenter;
-        //
-        // } else {
-        //   alert( '22' );
-        // }
+        var dist = hCenter - imgOffcet;
+
+console.log('------------------------------------');
+        console.log('imgOffcet  = ' + imgOffcet );
+        console.log('hCenter = ' + hCenter);
+        console.log('hScreen = ' + hScreen);
+        console.log('dist= ' + dist);
+console.log('------------------------------------');
+
+        if (dist >= hScreen) {
+          //alert( 'dist > hScreen' );
+           hCenter =-hCenter;
+
+
+        } else {
+        //  alert( 'dist < hScreen' );
+        }
 
         //alert('offset = ' + currentEl);
 
-        TweenMax.to(imgFly, 2, { x:1500, y: hCenter, scale:0.3, opacity:0 , ease:Power4.easeInOut   });
+        TweenMax.to(imgFly, 2, { x:1500, y: dist, scale:0.3, opacity:0 , ease:Power4.easeInOut   });
         setTimeout(function() { imgFly.remove() }, 2000);
 
 
