@@ -410,6 +410,7 @@ function initMap() {
 
       var imgOffcet = getOffset(imgFly).top;
       var hCenter = getOffset(cartLabel).top;
+      var hCenterHorisontal = getOffset(cartLabel).left;
 
 
         // var currentEl = $(this).offset().top - $(window).scrollTop();
@@ -424,7 +425,9 @@ console.log('------------------------------------');
 
         if (dist >= hScreen) {
           //alert( 'dist > hScreen' );
-           hCenter =-hCenter;
+
+          // hCenter =-hCenter;
+          dist =-dist
 
 
         } else {
@@ -433,8 +436,11 @@ console.log('------------------------------------');
 
         //alert('offset = ' + currentEl);
 
-        TweenMax.to(imgFly, 2, { x:1500, y: dist, scale:0.3, opacity:0 , ease:Power4.easeInOut   });
-        setTimeout(function() { imgFly.remove() }, 2000);
+        TweenMax.to(imgFly, 2, { x:hCenterHorisontal, y: dist, scale:0.25, opacity:0 , ease:Power4.easeInOut   });
+        setTimeout(function() {
+           imgFly.remove();
+          // .removeAttribute('id');
+         }, 2000);
 
 
 
