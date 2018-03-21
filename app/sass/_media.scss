@@ -28,7 +28,7 @@
   .arrwrap .swiper-button-next {
     right: 7px;
   }
-  
+
 }
 
 
@@ -554,4 +554,121 @@ footer {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
     /**/
+}
+
+
+/*-----------MSIE-11------------*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .grid-wrap {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+   -webkit-flex-wrap: wrap;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+    width: 100%;
+
+  }
+
+  .grid-item {
+    // float: left;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cols-three {
+    .grid-item {
+      width: 32.4%;
+      margin-right: 1.37%;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .cols-four {
+    .grid-item {
+      width: 22%;
+      margin-right: 1.37%;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .foodmenu li img {
+    width: auto;
+  }
+}
+
+
+/*-----------MSEDGE-12+------------*/
+@supports (-ms-ime-align:auto) {
+  .grid-wrap {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+   -webkit-flex-wrap: wrap;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+    width: 100%;
+
+  }
+
+  .grid-item {
+    // float: left;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+  }
+  .cols-three {
+    .grid-item {
+      width: 32.4%;
+      margin-right: 1.37%;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .cols-four {
+    .grid-item {
+      width: 22%;
+      margin-right: 1.37%;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .foodmenu li img {
+    width: auto;
+  }
+
+  .bbqsingle-bottom-wrapper .oneprice {
+    display: inline-table;
+  }
+}
+
+
+//------------MEDIA-MS-EDGE-12+--------------------------
+
+@supports (-ms-ime-align:auto) and (max-width : 1200px) {
+  .cols-four {
+    .grid-item {
+      width: 48%;
+      margin-right: 1.37%;
+      // &:last-of-type {
+      //   margin-right: 0;
+      // }
+    }
+  }
+}
+@supports (-ms-ime-align:auto) and (max-width : 600px) {
+
 }

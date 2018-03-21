@@ -284,7 +284,11 @@ body {
 
 .grid-wrap {
   display: grid;
+  display: -ms-grid;
   width: 100%;
+-ms-grid-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 270px 270px 270px 270px;  
+
   grid-auto-rows: minmax(340px, auto);
 }
 
@@ -364,6 +368,7 @@ body {
     flex: 0 0 50%;
     max-width: 50%;
    display: grid;
+   display: -ms-grid;
     // width: 100%;
     // grid-auto-rows: minmax(100px, auto);
   //  grid-column: 2;
