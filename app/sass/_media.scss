@@ -602,6 +602,14 @@ footer {
   .foodmenu li img {
     width: auto;
   }
+
+  .menu-mobile--itself.show {
+    display: block !important;
+  }
+
+  .menu-mobile--itself .close {
+    position: absolute;
+  }
 }
 
 
@@ -656,19 +664,174 @@ footer {
 }
 
 
-//------------MEDIA-MS-EDGE-12+--------------------------
+//----------MSIE-11-MEDIA-QUERY--------------------------------------
 
-@supports (-ms-ime-align:auto) and (max-width : 1200px) {
-  .cols-four {
+
+@media all and (max-width: 1290px) and (-ms-high-contrast:active) and (-ms-high-contrast:none) {
+  body {
+    background: #ffd400 !important;
+  }
+
+  .cols-four, .cols-three  {
     .grid-item {
-      width: 48%;
-      margin-right: 1.37%;
-      // &:last-of-type {
-      //   margin-right: 0;
-      // }
+      margin-bottom: 25px;
+      margin-right: 2%;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    // .counter {
+	  //   left: 10px;
+    // }
+    //
+    // .bbq-item-order {
+	  //   right: 10px;
+    // }
+  }
+}
+
+@media all and (max-width: 1280px) and (-ms-high-contrast:active) and (-ms-high-contrast:none) {
+  .cols-three  {
+    .grid-item {
+      margin-bottom: 25px;
+      margin-right: 1%;
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 }
-@supports (-ms-ime-align:auto) and (max-width : 600px) {
+
+@media all and (max-width: 1230px) and (-ms-high-contrast:active) and (-ms-high-contrast:none) {
+  body {
+    background: #48ff00 !important;
+  }
+
+  .cols-four, .cols-three  {
+    .grid-item {
+      width: 48%;
+      margin-bottom: 25px;
+      margin-right: 2%;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 616px) and (-ms-high-contrast:active) and (-ms-high-contrast:none) {
+  body {
+    background: #0019ff !important;
+  }
+}
+
+@media all and (max-width: 550px) and (-ms-high-contrast:active) and (-ms-high-contrast:none) {
+  body {
+    background: #0019ff !important;
+  }
+
+  .cols-four, .cols-three  {
+    .grid-item {
+      width: 100%;
+      margin-bottom: 25px;
+      margin-right: 0;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
 
 }
+
+//----------MSEDGE-12-MEDIA-QUERY-------------
+
+
+@supports (-ms-ime-align:auto) {
+  @media all and (max-width: 1290px) {
+    // body {
+    //   background: #000 !important;
+    // }
+  }
+
+  @media all and (max-width: 1280px) {
+    .cols-three {
+      .grid-item {
+        margin-bottom: 25px;
+        margin-right: 1%;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 1230px) {
+    // body {
+    //   background: #48ff00 !important;
+    // }
+
+    .cols-four, .cols-three  {
+      .grid-item {
+        width: 48%;
+        margin-bottom: 25px;
+        margin-right: 2%;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      .counter {
+        left: 10px;
+      }
+
+      .bbq-item-order {
+        right: 10px;
+      }
+    }
+  }
+
+
+  @media all and (max-width: 600px) {
+    // body {
+    //   background: #F0F !important;
+    // }
+
+    .cols-four, .cols-three  {
+      .grid-item {
+        width: 100%;
+        margin-bottom: 25px;
+        margin-right: 0;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+}
+
+
+
+// @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (max-width : 1200px) {
+//   background: red !important;
+// }
+
+//----------------MEDIA-MS-EDGE-12+--------------------------
+
+// @supports (-ms-ime-align:auto) and (max-width : 1200px) {
+//   body {
+//     background: red;
+//   }
+//   // .cols-four {
+//   //   .grid-item {
+//   //     width: 48%;
+//   //     margin-right: 1.37%;
+//   //   }
+//   // }
+// }
+
+// @supports (-ms-ime-align:auto) and (max-width : 600px) {
+//
+// }
