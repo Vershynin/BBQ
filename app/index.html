@@ -288,6 +288,9 @@
 		<p>А еще оцените наши акции, ведь за каждый заказ у нас мы подарим ролл «филадельфия» или ролл «калифорния ред». (*имеется в виду заказ на сумму 399 грн).</p>
 		<p>А Еще начислим на Вашу дисконтную карту 10% от суммы заказа. Когда на вашем счету будет более 150 баллов, Обменяйте накопленные балы на любые блюда из меню «Rock n Roll» по курсу 1 балл = 1 гривне. С бесплатной доставкой.</p>
 		<p>Доставка еды на дом в Днепре и Запорожье «Rock n Roll» это качество выше цены — попробуйте и убедитесь сами!</p>
+
+		<p><a href="#openModal-adr"> Модальное окно подтверждения адреса</a></p>
+		<p><a href="#openModal-thx"> Модальное окно - спасибо за заказ</a></p>
 	</div>
 </section>
 
@@ -382,10 +385,19 @@
 	</fieldset>
 	<fieldset class="deliverytime">
 		time delivery block
+
 	</fieldset>
 
 	<p class="freedelivery-block">Закажи еще на 123 грн и получи бесплатную доставку!</p>
-	<input type="submit" id="order-submit" value="Оформить заказ" class="cart-ordersubmit">
+
+
+	<p class="freedelivery-bonus">Доступно 2568 бонусных баллов <a href="#">Использовать</a></p>
+
+	<div class="cart-info">
+		111
+	</div>
+
+	<a href="#openModal-adr"><input type="submit" id="order-submit" value="Оформить заказ" class="cart-ordersubmit"></a>
 </form>
 
 </div>
@@ -435,14 +447,35 @@
 	</div>
 </footer>
 
-<a href="#openModal">Открыть модальное окно</a>
 
-<div id="openModal" class="modalDialog">
-	<div>
-		<a href="#mdl-close" title="Закрыть" class="mdl-close">X</a>
-		<h2>Модальное окно</h2>
-		<p>Пример простого модального окна, которое может быть создано с использованием CSS3.</p>
-		<p>Его можно использовать в широком диапазоне, начиная от вывода сообщений и заканчивая формой регистрации.</p>
+
+<div id="openModal-adr" class="modalDialog">
+	<div class="modal-adr">
+		<a href="#mdl-close" title="Закрыть" class="mdl-close">
+			<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" id="callback-close">
+					<path class="modal-closeico" fill="#C0C0C0" fill-rule="nonzero" d="M8.822 7.502l5.892-5.892A.936.936 0 1 0 13.39.286L7.498 6.178 1.606.286A.936.936 0 0 0 .282 1.61l5.892 5.892-5.892 5.892a.936.936 0 1 0 1.324 1.324l5.892-5.892 5.892 5.892a.934.934 0 0 0 1.324 0 .936.936 0 0 0 0-1.324L8.822 7.502z"/>
+			</svg>
+		</a>
+		<form action="">
+			<h2>Адрес доставки</h2>
+			<p>Перед подтверждением заказа укажите адрес доставки</p>
+			<textarea name="modal-adrtext" placeholder="Введите свой адрес доставки" class="delivery-adr"></textarea>
+			<a href="#mdl-close" class="subm">Оформить заказ</a>
+		</form>
+	</div>
+</div>
+
+
+<div id="openModal-thx" class="modalDialog">
+	<div class="modal-thx">
+		<a href="#mdl-close" title="Закрыть" class="mdl-close">
+			<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" id="callback-close">
+					<path class="modal-closeico" fill="#C0C0C0" fill-rule="nonzero" d="M8.822 7.502l5.892-5.892A.936.936 0 1 0 13.39.286L7.498 6.178 1.606.286A.936.936 0 0 0 .282 1.61l5.892 5.892-5.892 5.892a.936.936 0 1 0 1.324 1.324l5.892-5.892 5.892 5.892a.934.934 0 0 0 1.324 0 .936.936 0 0 0 0-1.324L8.822 7.502z"/>
+			</svg>
+		</a>
+		<h2>Благодарим за заказ!</h2>
+		<p>В течении 10 минут с вами свяжется менеджер для подтверждения заказа</p>
+		<a href="#mdl-close" class="subm">Спасибо!</a>
 	</div>
 </div>
 

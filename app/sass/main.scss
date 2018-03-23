@@ -1188,7 +1188,6 @@ border-radius: 10px;
 
 .modalDialog {
 	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -1211,37 +1210,78 @@ border-radius: 10px;
 // }
 
 .modalDialog > div {
-	width: 400px;
+  width: 100%;
+	max-width: 500px;
+  // height: 500px;
 	position: relative;
 	margin: 10% auto;
 	padding: 5px 20px 13px 20px;
-	border-radius: 10px;
-	background: #fff;
-	// background: -moz-linear-gradient(#fff, #999);
-	// background: -webkit-linear-gradient(#fff, #999);
-	// background: -o-linear-gradient(#fff, #999);
+	//background: #fff;
+  background: #fff url("../img/decoration-modal.png") repeat-x scroll 0 bottom / 80%;
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font: 600 30px/35px AvenirNext,sans-serif;
+    width: 100%;
+    text-align: center;
+    color: #474747;
+  }
+  p {
+    font: 500 16px/20px AvenirNext,sans-serif;
+    text-align: center;
+    color: #363636;
+  }
+
+  .delivery-adr {
+    height: 100px;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: solid 1px #d8d8d8;
+    font: 500 14px/16px AvenirNext,sans-serif;
+    text-align: left;
+    margin-top: 25px;
+    resize: horizontal;
+  }
+
+  .subm {
+    height: 40px;
+    background-color: #10b4a4;
+    box-shadow: 0 3px 0 0 #0a6a60;
+    font: 600 16px/40px AvenirNext,sans-serif;
+    text-align: center;
+    display: table;
+    padding: 0 29px;
+    margin: 25px auto 44px;
+    color: #fff;
+    &:hover, &:active, &:visited, &:focus {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
 }
 
 .mdl-close {
-	background: #606061;
-	color: #FFFFFF;
-	line-height: 25px;
 	position: absolute;
-	right: -12px;
+	right: 15px;
 	text-align: center;
-	top: -10px;
+	top: 15px;
 	width: 24px;
 	text-decoration: none;
-	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;
+  cursor: pointer;
 }
 
-.close:hover { background: #00d9ff; }
+//.mdl-close:hover { background: #00d9ff; }
+
+// .arrr {
+//   position: relative;
+//   width: 100%;
+//   display: table;
+//   z-index: 999999;
+// }
 
 
 

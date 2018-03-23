@@ -217,6 +217,34 @@ header #navbar-primary .navbar-nav > li > a {
   display: table;
 }
 
+.freedelivery-bonus {
+  width: 100%;
+  min-height: 54px;
+  background: rgba(16, 180, 164, 0.1) url(../img/box-celebration-gift-present-wrapped.svg) no-repeat scroll 15px center;
+  padding-left: 60px;
+  border-top: dashed 1px #d8d8d8;
+  border-bottom: dashed 1px #d8d8d8;
+  font: 600 14px/54px AvenirNext,sans-serif;
+  text-align: left;
+  color: #0a6a60;
+  margin-top: 21px;
+  display: table;
+  a {
+    width: 125px;
+    height: 30px;
+    background-color: #10b4a4;
+    box-shadow: 0 3px 0 0 #0a6a60;
+    font: 600 14px/30px AvenirNext,sans-serif;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    margin-left: 20px;
+    &:hover, &:active, &:focus, &:visited {
+      text-decoration: none;
+    }
+  }
+}
+
 
 .counter {
   display: table;
@@ -901,32 +929,7 @@ header #navbar-primary .navbar-nav > li > a {
 }
 
 
-.search-form {
-  fieldset {
-    width: 80%;
-    display: table;
-    margin: 0 auto;
-    position: relative;
-    input[type="text"] {
-      width: 100%;
-      height: 55px;
-      border-radius: 5px;
-      background-color: #fff;
-      border: none;
-      padding-left: 25px;
-    }
-    input[type="submit"] {
-      width: 50px;
-      height: 100%;
-      background: green;
-      position: absolute;
-      right: 0;
-      top: 0;
-      border: none;
-      background: url(../img/searchfield.svg) no-repeat scroll center center;
-    }
-  }
-}
+
 
 body {
   position: relative;
@@ -959,6 +962,34 @@ header {
     padding: 24px 0;
     position: relative;
     z-index: 3;
+}
+
+
+.search-form {
+  fieldset {
+    width: 80%;
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    input[type="text"] {
+      width: 100%;
+      height: 55px;
+      border-radius: 5px;
+      background-color: #fff;
+      border: none;
+      padding-left: 25px;
+    }
+    input[type="submit"] {
+      width: 50px;
+      height: 100%;
+      background: green;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: none;
+      background: url(../img/searchfield.svg) no-repeat scroll center center;
+    }
+  }
 }
 
 
