@@ -22,6 +22,7 @@ $(document).ready(function () {
 
     $('.menu_icon, .close').on('click', function(){
       $('.menu-mobile--itself').toggleClass('show');
+      $('.main-overlay').toggleClass('overlayed');
 
         if($('.callback-block').hasClass('open-trigger')) {
           $( ".callback-block" ).slideToggle( 300, function() {
