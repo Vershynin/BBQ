@@ -532,6 +532,10 @@ footer {
   .bbq-header {
     font: 600 27px/29px AvenirNext,sans-serif;
   }
+
+  .callback-form {
+    padding: 60px 0 0 0 !important;
+  }
 }
 /*==========  Mobile First  ==========*/
 /* Custom, iPhone Retina */
@@ -559,6 +563,15 @@ footer {
 
 /*-----------MSIE-11------------*/
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+  #trailer > video {
+    display: none;
+  }
+
+  #trailer {
+    background: url(../img/video-pic.jpg) no-repeat scroll 0 0 / cover;
+  }
+
   .grid-wrap {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -615,6 +628,15 @@ footer {
 
 /*-----------MSEDGE-12+------------*/
 @supports (-ms-ime-align:auto) {
+
+  #trailer > video {
+    display: none;
+  }
+
+  #trailer {
+    background: url(../img/video-pic.jpg) no-repeat scroll 0 0 / cover;
+  }
+
   .grid-wrap {
     display: -webkit-flex;
     display: -ms-flexbox;

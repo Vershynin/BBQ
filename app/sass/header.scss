@@ -818,6 +818,7 @@ header #navbar-primary .navbar-nav > li > a {
   color: #000;
 }
 .menu-mobile--itself.show {
+  background: #fff;
  -webkit-transform: translateX(0);
  transform: translateX(0);
  -webkit-transition: cubic-bezier(.42, 0, .58, 1) 0.50s;
@@ -830,6 +831,7 @@ header #navbar-primary .navbar-nav > li > a {
 }
 
 .overflowtest {
+   background: #fff;
    overflow-y: scroll;
    position: absolute;
    height: 100%;
