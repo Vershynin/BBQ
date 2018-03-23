@@ -812,8 +812,17 @@ footer {
   }
 }
 
+//iphone 4-only
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+  // body {
+  //   background: red !important;
+  // }
 
-
+  #trailer {
+    min-height: 380px !important;
+    max-height: 100%;
+  }
+}
 // @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (max-width : 1200px) {
 //   background: red !important;
 // }
