@@ -134,12 +134,16 @@ $(document).ready(function () {
 
     $(document).mouseup(function (e){ // событие клика по веб-документу
 		var div = $("#search"); // тут указываем ID элемента
-		if (!div.is(e.target) // если клик был не по нашему блоку
-		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
-            $( "#search" ).removeClass('search-open');
-            $( ".searchblock" ).slideUp( 300, function() {
+		if (!div.is(e.target) && div.has(e.target).length === 0) { // если клик был не по нашему блоку и не по его дочерним элементам
 
-            });
+        var el = $('.search-field');
+        if (!el.is(":focus")){
+          $( "#search" ).removeClass('search-open');
+          $( ".searchblock" ).slideUp( 300, function() {
+          });
+         console.log('Not focused');
+        }
+
 		}
 	});
 
