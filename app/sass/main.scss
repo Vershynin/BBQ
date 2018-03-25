@@ -699,11 +699,30 @@ border-radius: 10px;
 }
 
 
+// .col-md-6 {
+//   .menusection-itemblock {
+//     img {
+//       max-height: 560px;
+//     }
+//   }
+// }
+//
+//
+// .col-md-3 {
+//   .menusection-itemblock {
+//     img {
+//       max-width: 263px;
+//     }
+//   }
+// }
+
+
 .menusection-itemblock {
 
   img {
     width: 100%;
     object-fit: cover;
+    max-height: 250px;
   }
   position: relative;
 
@@ -781,6 +800,10 @@ border-radius: 10px;
         margin-bottom: 20px;
       }
     }
+  }
+
+  .restaurant-textsection {
+    margin-top: 20px;
   }
 
   .mainsection-text {
