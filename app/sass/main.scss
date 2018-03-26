@@ -802,6 +802,24 @@ border-radius: 10px;
     }
   }
 
+  .category-select {
+    // float: right;
+  }
+
+  .category-sort {
+    margin-top: -5px;
+    float: right;
+    label {
+      font: 500 14px/20px AvenirNext,sans-serif;
+       text-align: left;
+       color: #474747;
+    }
+
+    .order-select {
+      width: 180px;
+    }
+  }
+
   .restaurant-textsection {
     margin-top: 20px;
   }
