@@ -202,7 +202,7 @@
 	<div class="container textcont mainsection-text">
 
 		<div class="swiper">
-		    <div class="swiper-container">
+		    <div class="swiper-container swiper-restaurant">
 
 					<a href="#" class="swiper-button-prev"></a>
 					<a href="#" class="swiper-button-next"></a>
@@ -212,18 +212,44 @@
 		            <div class="swiper-slide img-responsive"><img src="img/bbq-slider2.jpg" alt="" title="d"></div>
 		            <div class="swiper-slide img-responsive"><img src="img/bbq-slider3.jpg" alt="" title="d"></div>
 		            <div class="swiper-slide img-responsive"><img src="img/bbq-slider4.jpg" alt="" title="d"></div>
+			         	<div class="swiper-slide img-responsive"><img src="img/bbq-slider01.jpg" alt="" title="d"></div>
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider02.jpg" alt="" title="d"></div>
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider03.jpg" alt="" title="d"></div>
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider04.jpg" alt="" title="d"></div>
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider05.jpg" alt="" title="d"></div>
 		        </div>
 		    </div>
 
-		    <!-- Add Pagination -->
-		    <div class="swiper-thumbnails">
+				<div class="swiper-container swiper-restaurant-nav">
+						<div class="swiper-wrapper">
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider1.jpg" alt="" title="d"></div>
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider2.jpg" alt="" title="d"></div>
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider3.jpg" alt="" title="d"></div>
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider4.jpg" alt="" title="d"></div>
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider01.jpg" alt="" title="d"></div>
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider02.jpg" alt="" title="d"></div>
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider03.jpg" alt="" title="d"></div>
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider04.jpg" alt="" title="d"></div>
+								<div class="swiper-slide img-responsive"><img src="img/bbq-slider05.jpg" alt="" title="d"></div>
+						</div>
+				</div>
+
+
+		    <!-- <div class="swiper-thumbnails">
 						<span><img src="img/bbq-slider1.jpg" alt="" title="d" class="img-responsive"></span>
 						<span><img src="img/bbq-slider2.jpg" alt="" title="d" class="img-responsive"></span>
 						<span><img src="img/bbq-slider3.jpg" alt="" title="d" class="img-responsive"></span>
 						<span><img src="img/bbq-slider4.jpg" alt="" title="d" class="img-responsive"></span>
-
-		    </div>
+						<span><img src="img/bbq-slider01.jpg" alt="" title="d" class="img-responsive"></span>
+						<span><img src="img/bbq-slider02.jpg" alt="" title="d" class="img-responsive"></span>
+						<span><img src="img/bbq-slider03.jpg" alt="" title="d" class="img-responsive"></span>
+						<span><img src="img/bbq-slider04.jpg" alt="" title="d" class="img-responsive"></span>
+						<span><img src="img/bbq-slider05.jpg" alt="" title="d" class="img-responsive"></span>
+		    </div> -->
 		</div>
+
+
+
 
 
 
@@ -436,27 +462,6 @@
 </footer>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<!-- Swiper JS -->
 
 
@@ -483,16 +488,7 @@
 
 <script>
 
-    $('.swiper-container').each(function () {
-        var swiper = new Swiper(this);
-        swiperThumbs(swiper, {
-            scope: '.swiper',
-            element: 'swiper-thumbnails',
-        });
-    });
-
-
-		var swiper = new Swiper('.swiper-container', { 
+		var swiper = new Swiper('.swiper-restaurant', { 
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
@@ -501,7 +497,73 @@
 				delay: 5000,
 		 }
 		});
+
+		var swiper = new Swiper('.swiper-restaurant-nav', { 
+			//pagination: '.pagination',
+			visibilityFullFit: true,
+			slidesPerView: '5',
+			//slidesPerView:'1',
+			centeredSlides: true,
+			initialSlide: '2',
+			autoplay: {
+				delay: 5000,
+		 }
+		});
+
+
+
 </script>
+
+<script>
+$(function() {
+function setContentSize() {
+	$('.swiper-content').css({
+		height: $(window).height() - $('.swiper-nav').height()
+	})
+}
+setContentSize()
+$(window).resize(function() {
+	setContentSize()
+})
+
+
+//Swiper Content
+var contentSwiper = $('.swiper-content').swiper({
+	slidesPerView: '1',
+	centeredSlides: true,
+	initialSlide: '2',
+	onSlideChangeStart: function() {
+		navSwiper.swipeTo(contentSwiper.activeIndex)
+	}
+})
+
+
+
+
+//Swiper Nav
+var navSwiper = $('.swiper-nav').swiper({
+	// //pagination: '.pagination',
+	// visibilityFullFit: true,
+	// slidesPerView: '5',
+	// //slidesPerView:'1',
+	// centeredSlides: true,
+	// initialSlide: '2',
+
+
+	//Thumbnails Clicks
+	onSlideClick: function() {
+		navSwiper.swipeTo(navSwiper.clickedSlideIndex)
+		contentSwiper.swipeTo(navSwiper.clickedSlideIndex, 500, false)
+	},
+	onSlideChangeStart: function() {
+		contentSwiper.swipeTo(navSwiper.activeIndex, 500, false)
+		$('.swiper-nav .active-nav').removeClass('active-nav')
+		$('.swiper-nav .swiper-slide').eq(contentSwiper.activeIndex).addClass('active-nav')
+	},
+})
+})
+</script>
+
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfS_4_tPY7zFaLTVnHdY9QmyYGKU3TZxE&callback=initMap"></script>
 </body>
 
