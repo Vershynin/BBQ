@@ -295,18 +295,6 @@
 <div class="swiper-container gallery-top">
 	<div class="swiper-wrapper">
 		<div class="swiper-slide">
-			<img src="img/bbq-slider1.jpg" alt="1" title="d">
-		</div>
-		<div class="swiper-slide">
-			<img src="img/bbq-slider2.jpg" alt="2" title="d">
-		</div>
-		<div class="swiper-slide">
-			<img src="img/bbq-slider3.jpg" alt="3" title="d">
-		</div>
-		<div class="swiper-slide">
-			<img src="img/bbq-slider4.jpg" alt="4" title="d">
-		</div>
-		<div class="swiper-slide">
 			<img src="img/bbq-slider01.jpg" alt="01" title="d">
 		</div>
 		<div class="swiper-slide">
@@ -320,6 +308,39 @@
 		</div>
 		<div class="swiper-slide">
 			<img src="img/bbq-slider05.jpg" alt="05" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider06.jpg" alt="06" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider07.jpg" alt="07" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider08.jpg" alt="08" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider09.jpg" alt="09" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider10.jpg" alt="10" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider11.jpg" alt="11" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider12.jpg" alt="12" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider13.jpg" alt="13" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider14.jpg" alt="14" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider15.jpg" alt="15" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider16.jpg" alt="16" title="d">
 		</div>
 	</div>
 	<!-- Add Arrows -->
@@ -329,18 +350,6 @@
 <div class="swiper-container gallery-thumbs">
 	<div class="swiper-wrapper">
 		<div class="swiper-slide">
-			<img src="img/bbq-slider1.jpg" alt="1" title="d">
-		</div>
-		<div class="swiper-slide">
-			<img src="img/bbq-slider2.jpg" alt="2" title="d">
-		</div>
-		<div class="swiper-slide">
-			<img src="img/bbq-slider3.jpg" alt="3" title="d">
-		</div>
-		<div class="swiper-slide">
-			<img src="img/bbq-slider4.jpg" alt="4" title="d">
-		</div>
-		<div class="swiper-slide">
 			<img src="img/bbq-slider01.jpg" alt="01" title="d">
 		</div>
 		<div class="swiper-slide">
@@ -354,6 +363,39 @@
 		</div>
 		<div class="swiper-slide">
 			<img src="img/bbq-slider05.jpg" alt="05" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider06.jpg" alt="06" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider07.jpg" alt="07" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider08.jpg" alt="08" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider09.jpg" alt="09" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider10.jpg" alt="10" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider11.jpg" alt="11" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider12.jpg" alt="12" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider13.jpg" alt="13" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider14.jpg" alt="14" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider15.jpg" alt="15" title="d">
+		</div>
+		<div class="swiper-slide">
+			<img src="img/bbq-slider16.jpg" alt="16" title="d">
 		</div>
 	</div>
 </div>
@@ -619,6 +661,9 @@
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+		autoplay: {
+    	delay: 6000,
+  	}
 	});
 	var galleryThumbs = new Swiper('.gallery-thumbs', {
 		spaceBetween: 10,
@@ -626,9 +671,14 @@
 		slidesPerView: 'auto',
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
+		autoplay: {
+			delay: 6000,
+		}
 	});
+	
 	galleryTop.controller.control = galleryThumbs;
 	galleryThumbs.controller.control = galleryTop;
+
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfS_4_tPY7zFaLTVnHdY9QmyYGKU3TZxE&callback=initMap"></script>
 </body>
