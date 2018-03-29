@@ -1052,16 +1052,31 @@ border-radius: 10px;
       margin-bottom: 40px;
     }
     .date {
-      .order-select {
+      // .order-select {
+      //   width: 180px;
+      //   padding: 0;
+      //   border: none;
+      // }
+      .form-group {
         width: 180px;
+        padding: 0;
+        border: none;
       }
     }
 
     .time {
       margin: 0 18px;
-      .order-select {
+
+      .form-group {
         width: 113px;
+        padding: 0;
+        border: none;
       }
+      // .order-select {
+      //   width: 113px;
+      //   padding: 0;
+      //   border: none;
+      // }
     }
 
     .place-quantity {
