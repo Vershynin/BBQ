@@ -386,6 +386,41 @@ footer {
     clear: both;
     margin-top: 10px;
   }
+
+  .orderform .date .form-group {
+    width: 170px;
+  }
+
+  .resaurant-order {
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width : 616px) {
+  fieldset {
+    width: 100%;
+  }
+
+  .orderform .date .form-group {
+    width: 100%;
+  }
+
+  .orderform .time {
+    margin: 0;
+  }
+
+  .orderform .time .form-group {
+    width: 100%;
+  }
+
+  .orderform .place-quantity .order-select {
+      width: 100%;
+  }
+
+  .orderform .name input, .orderform .phone input {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -520,13 +555,13 @@ footer {
   }
 }
 
-@media only screen and (min-width: 561px) and  (max-width: 634px) {
-
-  .orderform .time {
-      margin: 0 10px;
-  }
-
-}
+// @media only screen and (min-width: 561px) and  (max-width: 634px) {
+//
+//   .orderform .time {
+//       margin: 0 10px;
+//   }
+//
+// }
 
 
 /* Custom, iPhone Retina */
