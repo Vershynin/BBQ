@@ -307,8 +307,14 @@ header #navbar-primary .navbar-nav > li > a {
 
 
 
+.pagebackground {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  // padding-bottom: 100px;
+}
+
 .menupage {
-  background: url(../img/menu-header.jpg) no-repeat scroll 0 0 / cover;
   width: 100%;
   height: 400px;
   position: relative;
