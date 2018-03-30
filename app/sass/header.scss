@@ -296,6 +296,16 @@ header #navbar-primary .navbar-nav > li > a {
     margin-left: 30px;
     cursor: pointer;
   }
+
+  .callback-form {
+    width: 100%;
+    float: none;
+    clear: both;
+    span {
+      width: 100%;
+      display: table;
+    }
+  }
 }
 
 .cart-ordersubmit {

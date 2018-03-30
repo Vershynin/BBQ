@@ -172,40 +172,26 @@ function catalogItemCounter(field) {
 				fieldCount($(this));
 			});
 
-      // if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {
-      // return false;
-      // }
+//not('.order-name')
 
-      $(this).on('keyup keypress', function(e) {
-         if (e.keyCode == 8 || e.keyCode == 46) {}
-         else {
-           var letters=' 1234567890';
-           return (letters.indexOf(String.fromCharCode(e.which))!=-1);
-         }
+// if($(this).not('.order-name')) {
+//   alert(123);
+// }
+
+  $(this).on('keyup keypress', function(e) {
+  //  console.log($(this));
 
 
-         // if($(this).lengths == 0) {
-         //   $(this).val("1");
-         // }
-      });
-
-      // $(this).focusout(function(){
-      //   asp = $(this).val();
-      //   alert(asp);
-      //   // if ($(this).val == '') {
-      //   //      // $(this).val("1");
-      //   //      alert('ololo');
-      //   //  }
-      // });
-
-      // $(this).blur(function(){
-      //     alert('Элемент foo потерял фокус.');
-      //   });
+     if ((e.keyCode == 8 || e.keyCode == 46) && $(this).hasClass('fieldCount')) {
+       return false;
+     }
+     else {
+       var letters=' 1234567890';
+       return (letters.indexOf(String.fromCharCode(e.which))!=-1);
+     }
+  });
 
 
-      // if ($(this).val() == '') {
-      //      alert('ololo');
-      //  }
 		}
 
 catalogItemCounter('.fieldCount');
