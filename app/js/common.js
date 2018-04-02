@@ -178,23 +178,41 @@ function catalogItemCounter(field) {
 //   alert(123);
 // }
 
-  $(this).on('keyup keypress', function(e) {
-  //  console.log($(this));
 
 
-     if ((e.keyCode == 8 || e.keyCode == 46) && $(this).hasClass('fieldCount')) {
-       return false;
-     }
-     else {
-       var letters=' 1234567890';
-       return (letters.indexOf(String.fromCharCode(e.which))!=-1);
-     }
-  });
+
+
+
+   // document.querySelectorAll('.order-name').forEach(function() {
+   //    $(this).on('keyup keypress', function(e) {
+   //       if (e.keyCode == 8 || e.keyCode == 46) {}
+   //       else {
+   //        var letters=' 1234567890';
+   //        return (letters.indexOf(String.fromCharCode(e.which))!=-1);
+   //       }
+   //    });
+   //
+   //  });
+
 
 
 		}
 
 catalogItemCounter('.fieldCount');
+
+document.querySelectorAll('.fieldCount').forEach(function() {
+/* Only works in Blink browsers and Firefox 50+
+   no Safari or IE/Edge support */
+
+   $(this).on('keyup keypress', function(e) {
+      if (e.keyCode == 8 || e.keyCode == 46) {}
+      else {
+        var letters='1234567890';
+        return (letters.indexOf(String.fromCharCode(e.which))!=-1);
+      }
+   });
+
+ });
 
 //---------------------------------------------------------------
 
