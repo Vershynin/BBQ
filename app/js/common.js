@@ -200,19 +200,41 @@ function catalogItemCounter(field) {
 
 catalogItemCounter('.fieldCount');
 
-document.querySelectorAll('.fieldCount').forEach(function() {
+//document.querySelectorAll('.fieldCount').forEach(function() {
 /* Only works in Blink browsers and Firefox 50+
    no Safari or IE/Edge support */
+// co
+   $(this).find('.fieldCount').focus(function(e) {
 
-   $(this).on('keyup keypress', function(e) {
-      if (e.keyCode == 8 || e.keyCode == 46) {}
-      else {
-        var letters='1234567890';
-        return (letters.indexOf(String.fromCharCode(e.which))!=-1);
-      }
+     console.log(this);
+      // if( $(this).hasClass('.fieldCount')) {
+      //      console.log('hasClass, match');
+      //   if (e.keyCode == 8 || e.keyCode == 46) {}
+      //   else {
+      //     var letters='1234567890';
+      //     return (letters.indexOf(String.fromCharCode(e.which))!=-1);
+      //   }
+      // }
+
+
+      this.onkeypress= function(event) {
+        console.log('hasClass, match')
+       event= event || window.event;
+       if (event.charCode && (event.charCode < 48 || event.charCode > 57))
+       // проверка на event.charCode - чтобы пользователь мог нажать backspace, enter, стрелочку назад...
+        return false;
+      };
+
+
    });
 
- });
+
+
+
+
+
+
+ //});
 
 //---------------------------------------------------------------
 

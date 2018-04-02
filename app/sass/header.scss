@@ -308,6 +308,22 @@ header #navbar-primary .navbar-nav > li > a {
   }
 }
 
+.validation-block {
+  width: 100%;
+  display: table;
+  clear: both;
+  float: none;
+  .err {
+    font: 400 16px/16px AvenirNext,sans-serif;
+    text-align: center;
+    color: #F20005;
+    display: table;
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+  }
+}
+
 .cart-ordersubmit {
   width: 100%;
   position: relative;
