@@ -218,9 +218,11 @@ catalogItemCounter('.fieldCount');
 
 
       this.onkeypress= function(event) {
-        console.log('hasClass, match')
+
+      //  console.log('hasClass, match')
+
        event= event || window.event;
-       if (event.charCode && (event.charCode < 48 || event.charCode > 57))
+       if (event.charCode && (event.charCode < 49 || event.charCode > 57))
        // проверка на event.charCode - чтобы пользователь мог нажать backspace, enter, стрелочку назад...
         return false;
       };
@@ -228,7 +230,12 @@ catalogItemCounter('.fieldCount');
 
    });
 
-
+   $(this).find('.fieldCount').blur(function(){
+       inputValue = $(this).val();
+       if( inputValue < 1) {
+         $(this).val(1);
+       }
+   });
 
 
 

@@ -681,8 +681,11 @@
 // $('.input-group.').picker({format: "dd.mm.yyyy"});
 
 
+
 	var galleryTop = new Swiper('.gallery-top', {
 		spaceBetween: 0,
+		loop: 'true',
+
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
@@ -691,6 +694,12 @@
     	delay: 6000,
   	}
 	});
+
+
+
+	// setTimeout(function() {
+	//
+	// }, 100);
 
 	var galleryThumbs = new Swiper('.gallery-thumbs', {
 		spaceBetween: 10,
@@ -702,6 +711,9 @@
 		// 	delay: 6000,
 		// }
 	});
+
+	// galleryThumbs.update(true);
+	// galleryThumbs.slideTo(0, 0);
 
 	galleryTop.controller.control = galleryThumbs;
 	galleryThumbs.controller.control = galleryTop;
