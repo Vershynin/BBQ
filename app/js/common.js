@@ -434,6 +434,7 @@ function initMap() {
 
 
      $('.bbq-item-order').on('click', function(){
+       
         var that = $(this).parent().find('.animfind');
         $(this).parent().find('.animfind').clone().attr('id', 'animation-el').appendTo($(this).parent().find('a')[0]);
 
@@ -483,7 +484,8 @@ console.log('--------------------------------------');
 };
 
 
-  //MSIE-MSEDGE-OBJECT-FIT-POLYFILL
+  //---------------------MSIE-MSEDGE-OBJECT-FIT-POLYFILL----------------------------
+
      if ('objectFit' in document.documentElement.style === false) {
       document.addEventListener('DOMContentLoaded', function () {
         Array.prototype.forEach.call(document.querySelectorAll('img[data-object-fit]'), function (image) {
