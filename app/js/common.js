@@ -238,9 +238,6 @@ catalogItemCounter('.fieldCount');
    });
 
 
-
-
-
  //});
 
 //---------------------------------------------------------------
@@ -434,51 +431,148 @@ function initMap() {
 
 
      $('.bbq-item-order').on('click', function(){
-       
+
         var that = $(this).parent().find('.animfind');
         $(this).parent().find('.animfind').clone().attr('id', 'animation-el').appendTo($(this).parent().find('a')[0]);
 
+      //  $(this).parent().find('.animfind').attr('id', 'animation-el');
         imgFly = document.getElementById("animation-el");
         cartLabel = document.getElementById("cart_animation");
 
-        var hScreen = "innerHeight" in window
-               ? window.innerHeight
-               : document.documentElement.offsetHeight;
-
-               hScreen = hScreen / 2;
 
 
-        function getOffset(el) {
-          el = el.getBoundingClientRect();
-          return {
-            left: el.left + window.scrollX,
-            top: el.top + window.scrollY
+          var c = imgFly.getBoundingClientRect()
+
+
+
+        //  console.log('top:' + c.top + ' left: ' + c.left +'');
+
+
+        imgFly.style.position = "fixed";
+        imgFly.style.top = c.top + "px";
+        imgFly.style.left = c.left + "px";
+
+
+          var d = cartLabel.getBoundingClientRect()
+        //  console.log('top:' + d.top + ' left: ' + d.left +'');
+
+        //  console.log(c.top);
+console.log('--------------------------------------');
+        console.log('d.top->cartLabel - ' + d.top);
+        console.log('d.left->cartLabel - ' + d.left);
+        console.log('-------------------------');
+        console.log('c.top->imgFly - ' + c.top);
+        console.log('c.left->imgFly - ' + c.left);
+
+console.log('--------------------------------------');
+
+
+
+
+
+// var hScreen = "innerHeight" in window
+//        ? window.innerHeight
+//        : document.documentElement.offsetHeight;
+//
+//        hScreen = (hScreen / 2);
+
+
+
+          // TweenMax.to(imgFly, 2, { x:d.left, y:d.top, scale:0.25, opacity:0 , ease:Power0.easeNone   });
+          // setTimeout(function() {
+          //    imgFly.remove();
+          //  }, 2000);
+
+
+
+
+
+          //
+          // setTimeout(timeoutFunc, 150);
+          //
+          //
+          //
+          //
+          //
+          // function timeoutFunc(){
+          //     imgFly.style.top = d.top + "px";
+          //     imgFly.style.left = d.left + 60 + "px";
+          //   setTimeout(timeoutRemoveFunc, 150);
+          //   function timeoutRemoveFunc(){
+          //     imgFly.remove();
+          //   }
+          // }
+
+
+
+          setTimeout(timeoutFunc, 50);
+          function timeoutFunc(){
+            imgFly.style.top = d.top + "px";
+            imgFly.style.left = d.left + 100 + "px";
+            imgFly.style.opacity = 1;
+            imgFly.style.visibility = "visible";
+            imgFly.style.transition = "3s";
+            //transition:  3s;
+            setTimeout(timeoutRemoveFunc, 3000);
+            function timeoutRemoveFunc(){
+              imgFly.remove();
+            }
           }
-        }
 
-      var imgOffcet = getOffset(imgFly).top;
-      var hCenter = getOffset(cartLabel).top;
-      var hCenterHorisontal = getOffset(cartLabel).left;
-      var dist = hCenter - imgOffcet;
+      //  function clickFunc(btnF) {
+          //btnF.id = 'btn1';
+          //var btnId = document.getElementById('btn1');
+          //var c = btnId.getBoundingClientRect()
+          //console.log('top:' + c.top + ' left: ' + c.left +'');
 
-console.log('--------------------------------------');
-        console.log('imgOffcet  = ' + imgOffcet );
-        console.log('hCenter = ' + hCenter);
-        console.log('hScreen = ' + hScreen);
-        console.log('dist= ' + dist);
-console.log('--------------------------------------');
+          //var blCart =  document.getElementById('blockCart');
 
-        if (dist >= hScreen) {
-          dist =-dist
-        }
+        //  var d = blCart.getBoundingClientRect()
 
-        TweenMax.to(imgFly, 2, { x:hCenterHorisontal, y: dist, scale:0.25, opacity:0 , ease:Power4.easeInOut   });
-        setTimeout(function() {
-           imgFly.remove();
-         }, 2000);
 
-     		var bascket = $(".ic-cart-custom");
-     		var w = that.width();
+
+
+
+      //  }
+
+        // var hScreen = "innerHeight" in window
+        //        ? window.innerHeight
+        //        : document.documentElement.offsetHeight;
+        //
+        //        hScreen = hScreen / 2;
+
+
+        // function getOffset(el) {
+        //   el = el.getBoundingClientRect();
+        //   return {
+        //     left: el.left + window.scrollX,
+        //     top: el.top + window.scrollY
+        //   }
+        // }
+
+      // var imgOffcet = getOffset(imgFly).top;
+      // var hCenter = getOffset(cartLabel).top;
+      // var hCenterHorisontal = getOffset(cartLabel).left;
+      // var dist = hCenter - imgOffcet;
+
+// console.log('--------------------------------------');
+//         console.log('imgOffcet  = ' + imgOffcet );
+//         console.log('hCenter = ' + hCenter);
+//         console.log('hScreen = ' + hScreen);
+//         console.log('dist= ' + dist);
+// console.log('--------------------------------------');
+
+        // if (dist >= hScreen) {
+        //   dist =-dist
+        // }
+
+        // TweenMax.to(imgFly, 2, { x:hCenterHorisontal, y: dist, scale:0.25, opacity:0 , ease:Power4.easeInOut   });
+        // setTimeout(function() {
+        //    imgFly.remove();
+        //  }, 2000);
+
+     		//var bascket = $(".ic-cart-custom");
+     		//var w = that.width();
      	});
 
 };

@@ -421,6 +421,10 @@ footer {
     width: 100%;
     max-width: 100%;
   }
+
+  .top_slider .top_greenslide img {
+    object-fit: contain;
+  }
 }
 
 /* Extra Small Devices, Phones */
