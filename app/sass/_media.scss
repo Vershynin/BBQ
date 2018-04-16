@@ -454,6 +454,41 @@ footer {
     height: 75px;
   }
 
+  .order-contact p {
+    width: 100%;
+    float: none;
+    clear: both;
+  }
+
+  .order-contact p input {
+    max-width: 100%;
+  }
+
+  .order-select {
+    width: 100%;
+  }
+
+  .freedelivery-block, .freedelivery-bonus  {
+    padding: 18px 15px 18px 60px;
+    display: table;
+    font: 600 14px/14px AvenirNext,sans-serif;
+  }
+
+  .freedelivery-bonus a {
+    margin-left: 0;
+    margin-top: 5px;
+    float: none;
+    clear: both;
+  }
+
+  // .cart-ordersubmit {
+  //   margin-bottom: 60px;
+  // }
+
+  // {
+  //   font: 600 14px/14px AvenirNext,sans-serif;
+  // }
+
 }
 
 @media only screen and (max-width : 380px) {
