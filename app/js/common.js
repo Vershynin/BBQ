@@ -457,14 +457,17 @@ function initMap() {
         //  console.log('top:' + d.top + ' left: ' + d.left +'');
 
         //  console.log(c.top);
-console.log('--------------------------------------');
-        console.log('d.top->cartLabel - ' + d.top);
-        console.log('d.left->cartLabel - ' + d.left);
-        console.log('-------------------------');
-        console.log('c.top->imgFly - ' + c.top);
-        console.log('c.left->imgFly - ' + c.left);
 
-console.log('--------------------------------------');
+
+
+// console.log('--------------------------------------');
+//         console.log('d.top->cartLabel - ' + d.top);
+//         console.log('d.left->cartLabel - ' + d.left);
+//         console.log('-------------------------');
+//         console.log('c.top->imgFly - ' + c.top);
+//         console.log('c.left->imgFly - ' + c.left);
+//
+// console.log('--------------------------------------');
 
 
 
@@ -507,14 +510,16 @@ console.log('--------------------------------------');
 
           setTimeout(timeoutFunc, 50);
           function timeoutFunc(){
-            imgFly.style.top = d.top + "px";
+            imgFly.style.top = d.top - 50 + "px";
             imgFly.style.left = d.left + 100 + "px";
             imgFly.style.opacity = 1;
             imgFly.style.visibility = "visible";
-            imgFly.style.transition = "3s";
+            imgFly.style.transform = "scale(0.25)";
+            //transform: scale(0.7);
+            imgFly.style.transition = "1.5s";
             //transition:  3s;
-            setTimeout(timeoutRemoveFunc, 3000);
-            function timeoutRemoveFunc(){
+            setTimeout(timeoutRemoveFunc, 1500);
+            function timeoutRemoveFunc() {
               imgFly.remove();
             }
           }

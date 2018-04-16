@@ -1294,8 +1294,6 @@ border-radius: 10px;
 
   .animfind {
     position: relative;
-
-
   }
 
   #animation-el {
@@ -1421,6 +1419,62 @@ img[data-object-fit="contain"] {
 
 img[data-object-fit="cover"] {
 	object-fit: cover;
+}
+
+.section-singledinner-bbq {
+  padding: 50px 15px;
+  width: 100%;
+  height: auto;
+  // height: 500px;
+  display: table;
+  background: #fff url("../img/business-d.jpg") repeat-x scroll 0 0 / cover;
+  color: #000;
+  margin: 90px 0;
+
+  .singledinner-bbq {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    // height: 312px;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    padding: 50px 15px;
+    h2 {
+      font: 500 30px/35px AvenirNext,sans-serif;
+      text-align: center;
+      color: #474747;
+      margin: 0 0 37px 0;
+    }
+    p {
+      font: 500 18px/19px AvenirNext,sans-serif;
+      line-height: 1.44;
+      letter-spacing: normal;
+      text-align: center;
+      color: #474747;
+      margin: 0;
+    }
+
+    a {
+      width: 140px;
+      height: 40px;
+      display: table;
+      margin: 40px auto 0;
+      background-color: #10b4a4;
+      box-shadow: 0 3px 0 0 #0a6a60;
+      font: 500 18px/40px AvenirNext,sans-serif;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      &:hover, &:active, &:visited, &:focus {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+
 }
 
 
