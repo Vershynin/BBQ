@@ -91,9 +91,43 @@ body {
     background: #10b4a4 url(../img/pattern-green.png) repeat scroll 0 0/ 70%;
 }
 
+// .slogan-top {
+//   margin-top: 2%;
+// }
+
+.pagebackground {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-bottom: 40px;
+}
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #trailer {
+    padding-bottom: 50px;
+  }
+
+  .logo-center {
+    margin: 0px 15px;
+  }
+
+  .bbqsingle-bottom-wrapper .counter {
+    margin-left: 44px;
+}
+
+.week-item a {
+    width: 110px;
+}
+
+  // .slogan-top {
+  //   margin-top: 2%;
+  // }
+  //
+  // .top-buttons-wrap {
+  //   margin: 20px auto 0;
+  // }
 
 }
 
@@ -183,6 +217,8 @@ body {
       margin: 0;
     }
   }
+
+
 
   // .callback-form input[type="tel"], .callback-form input[type="text"] {
   //   width: 25%;
@@ -365,6 +401,7 @@ footer {
 
   #trailer {
     display: table;
+    padding-bottom: 50px;
   }
 
   .form-corporatedinner .customradio span {
