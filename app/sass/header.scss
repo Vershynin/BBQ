@@ -1138,6 +1138,41 @@ header {
   padding: 0 !important;
 }
 
+.deliverytime {
+    width: 70%;
+    float: left;
+    label {
+      margin-bottom: 10px;
+      line-height: 17px;
+      color: #474747;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    span {
+      display: table;
+      float: left;
+      margin-right: 20px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      input[type="radio"] {
+         display:none;
+       }
+
+       label {
+           display:inline-block;
+           background: transparent url("../img/rb-empty.svg") no-repeat scroll left center;
+           padding-left: 30px;
+       }
+
+       input[type="radio"]:checked + label {
+           background: transparent url("../img/rb-full.svg") no-repeat scroll left center;
+       }
+    }
+
+}
+
 .is_overlay{ display: block; width: 100%; height: 100%; }
 
 // .overflowtest {

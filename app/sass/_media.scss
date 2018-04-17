@@ -664,6 +664,37 @@ footer {
 
   .callback-form {
     padding: 60px 0 0 0 !important;
+    display: table;
+    box-sizing: border-box;
+    width: 100%;
+
+    #callback-close {
+     right: 9px;
+     top: 11px;
+   }
+  }
+
+  .callback-block {
+    padding: 0 5px;
+    // position: static;
+    .container {
+      display: table;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 0 15px 0;
+      // position: static;
+    }
+  }
+
+  #callback-submit {
+    margin-bottom: 10px;
+  }
+
+
+
+  .callback-form input[type="tel"], .callback-form input[type="text"] {
+    display: table;
+    width: 100%;
   }
 }
 /*==========  Mobile First  ==========*/
