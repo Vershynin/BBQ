@@ -594,3 +594,19 @@ function initMap() {
         });
       });
      }
+
+     //------------------swiper buttons-disable- anchor top------------------
+
+$('.swiper-button-prev, .swiper-button-next').click(function(e) {
+
+  var current = $(this);
+
+    if ( current.hasClass('swiper-button-disabled') ) {
+
+      e.stopPropagation();
+
+    //  console.log($(this));
+    //  console.log('is-disabled');
+    }
+  }
+);
