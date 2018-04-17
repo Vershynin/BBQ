@@ -1139,10 +1139,12 @@ header {
 }
 
 .deliverytime {
-    width: 70%;
+    width: 100%;
     float: left;
+    margin-bottom: 15px;
     label {
-      margin-bottom: 10px;
+      margin-bottom: 0;
+      margin-top: 9px;
       line-height: 17px;
       color: #474747;
       font-size: 14px;
@@ -1151,9 +1153,25 @@ header {
     &_item {
       display: table;
       float: left;
-      margin-right: 20px;
+      margin-right: 15px;
+
+      // &:last-of-type {
+      //   margin-right: 0;
+      // }
+
+      #cart-timepicker, #cart-datepicker {
+        max-width: 100px;
+        float: left;
+
+      }
+
+
       &:last-of-type {
         margin-right: 0;
+      }
+
+      #cart-datepicker {
+        margin-left: 10px;
       }
 
       input[type="radio"] {
@@ -1164,10 +1182,18 @@ header {
            display:inline-block;
            background: transparent url("../img/rb-empty.svg") no-repeat scroll left center;
            padding-left: 30px;
+           opacity: 0.5;
+           cursor: pointer;
        }
 
        input[type="radio"]:checked + label {
            background: transparent url("../img/rb-full.svg") no-repeat scroll left center;
+           opacity: 1;
+       }
+
+       .radio-disabled {
+         pointer-events: none;
+         opacity: 0.5;
        }
     }
 

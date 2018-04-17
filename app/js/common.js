@@ -602,11 +602,30 @@ $('.swiper-button-prev, .swiper-button-next').click(function(e) {
   var current = $(this);
 
     if ( current.hasClass('swiper-button-disabled') ) {
-
       e.stopPropagation();
-
-    //  console.log($(this));
-    //  console.log('is-disabled');
     }
-  }
-);
+  });
+  //--------------radioblock-checked----------------------------------------
+
+  //$("#item").removeClass();
+
+  // if ($("#delivery-intime:checked")) {
+  //   alert('check');
+  // };
+
+
+
+$('#delivery-intime').click(function() {
+   if($(this).is(':checked')) {
+
+     $('#cart-datepicker, #cart-timepicker').removeClass('radio-disabled');
+   }
+});
+
+
+$('#delivery-fast').click(function() {
+   if($(this).is(':checked')) {
+      $('#cart-datepicker, #cart-timepicker').addClass('radio-disabled');
+   }
+
+});

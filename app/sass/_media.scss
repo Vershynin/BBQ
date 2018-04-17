@@ -553,6 +553,27 @@ footer {
     padding: 30px;
   }
 
+  .deliverytime_dfast {
+    float: none;
+    clear: both;
+    width: 100%;
+  }
+
+  .deliverytime_dintime {
+    // float: none;
+    // clear: both;
+    // width: 100%;
+    margin-top: 12px;
+  }
+
+  #cart-datepicker {
+    margin-left: 0;
+  }
+
+  #cart-timepicker, #cart-datepicker {
+    margin-top: 12px;
+  }
+
 }
 
 @media only screen and (max-width : 360px) {

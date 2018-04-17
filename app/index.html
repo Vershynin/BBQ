@@ -398,30 +398,30 @@
 	</fieldset>
 	<fieldset class="deliverytime">
 
-		<span class="deliverytime_item">
-			<input type="radio" id="delivery-fast" name="dinner-period">
+		<span class="deliverytime_item deliverytime_dfast">
+			<input type="radio" id="delivery-fast" name="dinner-period" checked>
 			<label for="delivery-fast">В ближайшее время</label>
 		</span>
-		<span class="deliverytime_item">
-			<input type="radio" id="delivery-intime" name="dinner-period">
+		<span class="deliverytime_item deliverytime_dintime">
+			<input type="radio" id="delivery-intime" name="dinner-period" >
 			<label for="delivery-intime">Доставить</label>
 		</span>
-		<span class="deliverytime_item">
-			<div class="input-group date" id="cart-datepicker">
-					<input type="text" class="form-control" />
+		<div class="deliverytime_item">
+			<div class="input-group date radio-disabled" id="cart-datepicker">
+					<input type="text" class="form-control" readonly="true" />
 					<span class="input-group-addon">
 							<span class="glyphicon glyphicon-calendar"></span>
 					</span>
 			</div>
-		</span>
-		<span class="deliverytime_item">
-			<div class='input-group date' id='cart-timepicker'>
-					<input type='text' class="form-control" />
+		</div>
+		<div class="deliverytime_item">
+			<div class="input-group date radio-disabled" id="cart-timepicker">
+					<input type="text" class="form-control" readonly="true" />
 					<span class="input-group-addon">
 							<span class="glyphicon glyphicon-time"></span>
 					</span>
 			</div>
-		</span>
+		</div>
 
 	</fieldset>
 
@@ -574,6 +574,7 @@
 		//ex #order-datepicker
 				$('#cart-datepicker').datetimepicker({
 					format: "dd MM",
+					ignoreReadonly: true,
 					allowInputToggle: true,
 					locale: 'RU',
 					daysOfWeekDisabled: [1],
@@ -583,6 +584,7 @@
 		//ex #datetimepicker3
 				$('#cart-timepicker').datetimepicker({
             format: 'HH:mm',
+						ignoreReadonly: true,
 						enabledHours: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
 						allowInputToggle: true
         });
