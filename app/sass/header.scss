@@ -331,6 +331,10 @@ header #navbar-primary .navbar-nav > li > a {
   position: relative;
   @extend %btn-style;
   margin-top: 20px;
+  margin-bottom: 20px;
+  &:hover, &:active, &:visited, &:focus {
+    text-decoration: none;
+  }
 }
 
 
@@ -1200,21 +1204,52 @@ header {
 }
 
 .cartinfo-list {
-  padding: 0;
+  padding: 0 0 20px 0;
+  margin-top: 21px;
+  // margin-bottom: 20px;
+  border-bottom: 1px dashed #d8d8d8;
   li {
     list-style: none;
     width: 100%;
     display: table;
+    margin-bottom: 14px;
     span{
       &:first-of-type {
-        color: #fdd;
         float: left;
       }
       &:last-of-type {
-        color: #f00;
         float: right;
       }
     }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .cartinfo-data {
+    font: 500 15px/17px AvenirNext,sans-serif;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #7e7e7e;
+  }
+
+  .cartinfo-bonuces {
+    font: 700 15px/17px AvenirNext,sans-serif;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #10b4a4;
+  }
+  .cartinfo-summary {
+    font: 600 19px/21px AvenirNext,sans-serif;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #474747;
   }
 }
 
