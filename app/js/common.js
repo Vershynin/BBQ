@@ -5,6 +5,7 @@ $(document).ready(function () {
     $('.menu_icon, .close').on('click', function(){
       $('.menu-mobile--itself').toggleClass('show');
       $('.main-overlay').toggleClass('overlayed');
+      $("html").toggleClass('cartoverflow');
 
         if($('.callback-block').hasClass('open-trigger')) {
           $( ".callback-block" ).slideToggle( 300, function() {
@@ -36,6 +37,7 @@ $(document).ready(function () {
         //  container.hide();
         $('.menu-mobile--itself').removeClass('show');
         $('.main-overlay').removeClass('overlayed');
+        $("html").removeClass('cartoverflow');
         setTimeout(function() {
           $('body').removeClass('body-overflow');
         }, 200);

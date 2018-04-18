@@ -969,7 +969,8 @@ header #navbar-primary .navbar-nav > li > a {
   height: 60px;
   position: fixed;
   right: 0;
-  top: 50%;
+  // top: 50%;
+  top: 50vh;
   border-radius: 5px;
   z-index: 4;
 }
@@ -980,6 +981,10 @@ header #navbar-primary .navbar-nav > li > a {
 body {
   position: relative;
   overflow-x: hidden;
+}
+
+.cartoverflow {
+  overflow: hidden;
 }
 
 header {
