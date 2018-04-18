@@ -605,6 +605,8 @@ $('.swiper-button-prev, .swiper-button-next').click(function(e) {
       e.stopPropagation();
     }
   });
+
+
   //--------------radioblock-checked----------------------------------------
 
   //$("#item").removeClass();

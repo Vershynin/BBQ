@@ -431,7 +431,25 @@
 	<p class="freedelivery-bonus">Доступно 2568 бонусных баллов <a href="#">Использовать</a></p>
 
 	<div class="cart-info">
-		111
+		<ul class="cartinfo-list">
+			<li class="cartinfo-data">
+				<span>Стоимость заказа</span>
+				<span>877 грн</span>
+			</li>
+			<li class="cartinfo-data">
+				<span>Доставка</span>
+				<span>50 грн</span>
+			</li>
+			<li class="cartinfo-bonuces">
+				<span>Бонусы</span>
+				<span>−255 грн</span>
+			</li>
+
+			<li class="cartinfo-summary">
+				<span>Итого к оплате</span>
+				<span>672 грн</span>
+			</li>
+		</ul>
 	</div>
 
 	<a href="#openModal-adr"><input type="submit" id="order-submit" value="Оформить заказ" class="cart-ordersubmit"></a>
@@ -573,10 +591,13 @@
 
 		//ex #order-datepicker
 				$('#cart-datepicker').datetimepicker({
-					format: "dd MM",
+					// format: "d/dd",
+				//	format: 'DD.MM.YYYY',
+				format: 'dd D',
 					ignoreReadonly: true,
 					allowInputToggle: true,
 					locale: 'RU',
+
 					daysOfWeekDisabled: [1],
 					minDate: new Date()
 				});

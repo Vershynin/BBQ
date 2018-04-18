@@ -1199,6 +1199,25 @@ header {
 
 }
 
+.cartinfo-list {
+  padding: 0;
+  li {
+    list-style: none;
+    width: 100%;
+    display: table;
+    span{
+      &:first-of-type {
+        color: #fdd;
+        float: left;
+      }
+      &:last-of-type {
+        color: #f00;
+        float: right;
+      }
+    }
+  }
+}
+
 .is_overlay{ display: block; width: 100%; height: 100%; }
 
 // .overflowtest {
