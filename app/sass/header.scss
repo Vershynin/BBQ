@@ -39,10 +39,48 @@
 
 .header-phone {
     margin-right: 94px;
-    background: url(../img/incoming-call.svg) no-repeat scroll left center;
-    padding-left: 30px;
+    //background: url(../img/incoming-call.svg) no-repeat scroll left center;
+    // padding-left: 30px;
     //incoming-call.svg
 }
+
+//--------------------------------------
+
+
+
+.phoneslider {
+  position: relative;
+  display: table;
+  line-height: 30px;
+  margin-bottom: -12px;
+  // padding-left: 50px;
+
+  svg {
+    fill: #fff;
+    position: relative;
+    bottom: -4px;
+    left: 0;
+    // margin-right: 15px;
+  }
+}
+
+.changenumber {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: table;
+  float:left;
+  margin-right: 5px;
+}
+
+.basenumber{
+  position: relarive;
+  right: 0;
+  top: 0;
+}
+
+//--------------------------------------
+
 
 .work-time {
   margin-right: 45px;
@@ -964,15 +1002,29 @@ header #navbar-primary .navbar-nav > li > a {
 
 
 .ic-cart-custom {
-  background: #474747 url(../img/cart.svg) no-repeat scroll center center;
+  background: #474747 url(../img/cart.svg) no-repeat scroll center 10px;
   width: 60px;
   height: 60px;
   position: fixed;
+  overflow: hidden;
   right: 0;
   // top: 50%;
   top: 50vh;
   border-radius: 5px;
-  z-index: 4;
+  z-index: 12;
+  .cartcount-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #10b4a4;
+    font: 700 16px/20px AvenirNext,sans-serif;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  }
 }
 
 

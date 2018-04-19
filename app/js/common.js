@@ -1,5 +1,44 @@
 $(document).ready(function () {
 
+
+  //--------------phone-numbers-slider-----------------------------------------
+
+
+   function phone_slider() {
+      slider_phone1();
+  }
+
+  function slider_phone1() {
+     // $('#slider_image1').slideDown(500);
+     $('#slider_phone1').fadeIn(500);
+      $('#slider_phone2').css('display', 'none');
+      $('#slider_phone3').css('display', 'none');
+
+      setTimeout(slider_phone2, 3500);
+  }
+
+  function slider_phone2() {
+      $('#slider_phone1').css('display', 'none');
+      //$('#slider_image2').slideDown(500);
+      $('#slider_phone2').fadeIn(500);
+      $('#slider_phone3').css('display', 'none');
+
+      setTimeout(slider_phone3, 3500);
+  }
+
+  function slider_phone3() {
+      $('#slider_phone1').css('display', 'none');
+      $('#slider_phone2').css('display', 'none');
+      $('#slider_phone3').fadeIn(500);
+      //$('#slider_image3').slideDown(500);
+
+      setTimeout(slider_phone1, 3500);
+  }
+
+  phone_slider();
+
+
+
   //----------------------MENU------------------------------
 
     $('.menu_icon, .close').on('click', function(){
