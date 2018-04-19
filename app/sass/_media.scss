@@ -88,7 +88,7 @@ body {
 }
 
 .menupage-oneitem {
-    background: #10b4a4 url(../img/pattern-green.png) repeat scroll 0 0/ 70%;
+    background: #10b4a4 url(../img/pattern-green.png) repeat scroll 0 0 / 70%;
 }
 
 // .slogan-top {
@@ -100,6 +100,27 @@ body {
     height: auto;
     position: relative;
     padding-bottom: 40px;
+}
+
+
+.header-subpage {
+  width: 100%;
+  display: block;
+  span {
+    width: 100%;
+    position: static;
+    display: table;
+    padding: 50px 0;
+  }
+  .header-subpage__btn_delivery {
+    position: static;
+    margin-bottom: 50px;
+  }
+
+  .header-subpage__btn_restaurant {
+    position: static;
+    margin-top: 50px;
+  }
 }
 
 }

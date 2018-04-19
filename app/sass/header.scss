@@ -939,6 +939,7 @@ header #navbar-primary .navbar-nav > li > a {
   // transition: 0.5s;
   color: #000;
 }
+
 .menu-mobile--itself.show {
   background: #fff;
  -webkit-transform: translateX(0);
@@ -950,6 +951,10 @@ header #navbar-primary .navbar-nav > li > a {
   position: fixed;
   max-height: 100%;
   display: table !important
+}
+
+.menu-mobile--itself.show .cartcount-label {
+  display: none;
 }
 
 .overflowtest {
