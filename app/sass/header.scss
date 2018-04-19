@@ -115,6 +115,52 @@ header #navbar-primary .navbar-nav > li > a {
     margin-top: 14%;
 }
 
+.header-subpage {
+  width: 100%;
+  display: table;
+  margin-top: 5%;
+  position: relative;
+  z-index: 4;
+  h1 {
+    font: 700 36px/39px AvenirNext,sans-serif;
+    text-align: center;
+    color: #fff;
+    display: table;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .header-subpage__btn {
+    width: 173px;
+    height: 48px;
+    padding: 12px 41px;
+    background-color: #10b4a4;
+    box-shadow: 0 3px 0 0 #0a6a60;
+    font: 500 20px/22px AvenirNext,sans-serif;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    &:hover, &:active, &:focus, &:visited {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .header-subpage__btn_delivery {
+    // margin-right: 5%;
+    position: absolute;
+    left: -320px;
+    top: -7px;
+  }
+
+  .header-subpage__btn_restaurant {
+    // margin-left: 5%;
+    position: absolute;
+    right: -320px;
+    top: -7px;
+  }
+}
+
 .top-buttons-wrap {
   display: table;
   margin: 40px auto 0;
@@ -1124,7 +1170,9 @@ header {
   }
 
   .header-phone {
-    background: url(../img/incoming-call-black.svg) no-repeat scroll left center;
+    svg {
+      fill: #474747;
+    }
 }
 
   .work-time {
