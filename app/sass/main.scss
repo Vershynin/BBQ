@@ -453,24 +453,43 @@ border-radius: 10px;
         display: table;
         width: 100%;
         margin-top: 20px;
-        span {
+        .params {
           width: 50%;
           display: table;
           float: left;
           box-sizing: border-box;
           &:first-of-type {
+            text-align: left;
+          }
+
+          &:last-of-type {
+            text-align: right;
+          }
+
+          .weight {
             padding-left: 25px;
             font: 500 14px/18px AvenirNext,sans-serif;
             color: #474747;
             text-align: left;
           }
 
-          &:last-of-type {
+          .newprice {
+            display: table;
+            width: 100%;
             padding-right: 25px;
             font: 700 18px/18px AvenirNext,sans-serif;
             color: #474747;
-            text-align: right;
           }
+
+          .oldprice {
+            display: table;
+            width: 100%;
+            padding-right: 25px;
+            font: 500 14px/18px AvenirNext,sans-serif;
+            color: #7e7e7e;
+            text-decoration: line-through;
+          }
+
         }
       }
 
