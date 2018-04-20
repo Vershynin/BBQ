@@ -317,11 +317,22 @@ body {
     margin-top: 10px;
   }
   .recommended-price {
-    font: 700 20px/20px AvenirNext,sans-serif;
     width: 100%;
     text-align: center;
-    color: #474747;
     display: block;
+    margin: 0;
+
+    .mainprice {
+      font: 700 20px/20px AvenirNext,sans-serif;
+      color: #474747;
+    }
+
+    .saleprice {
+      font: 500 16px/16px AvenirNext,sans-serif;
+      color: #7e7e7e;
+      text-decoration: line-through;
+      margin: 4px 0 0 7px;
+    }
   }
 
   .counter {
@@ -669,8 +680,23 @@ border-radius: 10px;
 
   .oneprice {
     display: inline-block;
-    font: 700 24px/48px AvenirNext,sans-serif;
-    color: #474747;
+    position: relative;
+    // margin-bottom: -10px;
+    .oldprice {
+      font: 500 16px/16px AvenirNext,sans-serif;
+      color: #7e7e7e;
+      display: block;
+      text-decoration: line-through;
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+    }
+    .newprice {
+      font: 700 24px/24px AvenirNext,sans-serif;
+      color: #474747;
+      display: block;
+      margin-top: 10px;
+    }
   }
 
   .counter {
