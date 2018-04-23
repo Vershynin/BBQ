@@ -1,7 +1,17 @@
 $(document).ready(function () {
 
 
-  //--------------phone-numbers-slider-----------------------------------------
+//-------------DISABLE-ENTER-ON-SUBMIT-DELIVERY-MODALS--------------------------
+
+$('#test_lunch, #subscribe-form').on('keyup keypress', function(e) {
+var keyCode = e.keyCode || e.which;
+	if (keyCode === 13) {
+		e.preventDefault();
+		return false;
+	}
+});
+
+//--------------phone-numbers-slider-----------------------------------------
 
 
    function phone_slider() {
