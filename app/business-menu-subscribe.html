@@ -40,6 +40,7 @@
 		<link rel="stylesheet" href="css/main.min.css">
 	</noscript>
   <link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
 
 
 	<!-- Load Custom CSS Compiled without JS End -->
@@ -224,12 +225,21 @@
 					</select>
 				</fieldset>
 				<fieldset class="corporatedinner-select">
-					<label for="">Время доставки</label>
+					<label for="">Время</label>
+					<div class="form-group">
+							<div class='input-group date' id='datetimepicker-subscribe'>
+									<input type='text' class="form-control" readonly="true" />
+									<span class="input-group-addon">
+											<span class="glyphicon glyphicon-time"></span>
+									</span>
+							</div>
+					</div>
+					<!-- <label for="">Время доставки</label>
 					<select class="order-select">
 						<option>13:00</option>
 						<option>14:00</option>
 						<option>15:00</option>
-					</select>
+					</select> -->
 				</fieldset>
 				<fieldset class="dinner-textarea">
 						<label for="">Адрес доставки</label>
@@ -539,6 +549,27 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+
+
+<script type="text/javascript" src="js/moment-with-locales.js"></script>
+<script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/collapse.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+
+<script>
+
+	$(document).ready(function(){
+
+				$('#datetimepicker-subscribe').datetimepicker({
+            format: 'HH:mm',
+						ignoreReadonly: true,
+						enabledHours: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+						allowInputToggle: true
+        });
+		});
+
+</script>
 
 
 <script src="js/swiper.min.js"></script>
