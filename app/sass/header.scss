@@ -285,6 +285,11 @@ header #navbar-primary .navbar-nav > li > a {
       color: #474747;
     }
   }
+
+  .order-name[aria-invalid="true"] {
+    border: solid 1px red;
+  }
+
 }
 
 
