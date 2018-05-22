@@ -1065,6 +1065,19 @@ header #navbar-primary .navbar-nav > li > a {
 }
 
 
+#deliverybadge {
+  background: #474747 url(../img/delivery.svg) no-repeat scroll center center;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  top: 50vh;
+  border-radius: 5px;
+  z-index: 12;
+}
+
+
 .ic-cart-custom {
   background: #474747 url(../img/cart.svg) no-repeat scroll center 10px;
   width: 60px;
